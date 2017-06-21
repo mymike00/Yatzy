@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=Yatzy
+Exec=qmlscene %U Yatzy/Main.qml
+Icon=Yatzy/Yatzy.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
