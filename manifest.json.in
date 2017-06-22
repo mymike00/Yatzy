@@ -9,7 +9,7 @@
             "desktop": "Yatzy/Yatzy.desktop"
         }
     },
-    "version": "0.1",
+    "version": "0.2",
     "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
     "framework": "ubuntu-sdk-15.04"
 }

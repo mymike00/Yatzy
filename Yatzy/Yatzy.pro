@@ -7,7 +7,8 @@ QML_FILES += $$files(*.qml,true) \
              $$files(*.js,true)
 
 CONF_FILES +=  Yatzy.apparmor \
-               Yatzy.png
+               Yatzy.svg \
+               high-scores.svg
 
 AP_TEST_FILES += tests/autopilot/run \
                  $$files(tests/*.py,true)               

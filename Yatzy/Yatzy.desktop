@@ -1,7 +1,17 @@
 [Desktop Entry]
-_Name=Yatzy
+Name=Yatzy
+Name[de]=Yatzy
+Name[el]=Yatzy
+Name[es]=Yatzy
+Name[fr]=Yahtzee
+Name[hu]=Kockapóker
+Name[it]=Yatzy
+Name[nl]=Yatzy
+Name[zh_CN]=掷骰子
 Exec=qmlscene %U Yatzy/Main.qml
-Icon=Yatzy/Yatzy.png
+Icon=Yatzy/Yatzy.svg
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
+X-Ubuntu-Splash-Color=#006268
+X-Ubuntu-Splash-Image=Yatzy/Yatzy.svg

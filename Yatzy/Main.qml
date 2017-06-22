@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts 1.1
 import QtQuick.LocalStorage 2.0
 
 /*!
@@ -29,15 +29,16 @@ MainView {
             Row {
                 spacing: units.gu(1)
                 width: d.width
+                Component.onCompleted: console.log(width)
 
                 Button {
                     id: restartButton
                     height: restartCol.height+units.gu(2)
-                    width: restartCol.width+units.gu(2)
+                    width: parent.width/2
 
                     Column {
                         id: restartCol
-                        x: units.gu(1)
+                        x: (restartButton.width-restartCol.width)/2
                         y: units.gu(1)
                         spacing: units.gu(1)
 
@@ -50,7 +51,8 @@ MainView {
                         }
 
                         Text {
-                            text: i18n.tr("Restart game<br/>Start a new game")
+                            // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
+                            text: i18n.tr("Start a<br/>new game")
                             horizontalAlignment: Text.AlignHCenter
                             color: "white"
                         }
@@ -67,11 +69,11 @@ MainView {
                 Button {
                     id: closeButton
                     height: closeCol.height+units.gu(2)
-                    width: closeCol.width+units.gu(2)
+                    width: parent.width/2
 
                     Column {
                         id: closeCol
-                        x: units.gu(1)
+                        x: (closeButton.width-closeCol.width)/2
                         y: units.gu(1)
                         spacing: units.gu(1)
 
@@ -84,6 +86,7 @@ MainView {
                         }
 
                         Text {
+                            // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
                             text: i18n.tr("Continue<br/>current game")
                             horizontalAlignment: Text.AlignHCenter
                             color: "white"
@@ -137,9 +140,11 @@ MainView {
                 trailingActionBar.actions: [
                     Action {
                         iconName: "info"
+                        text: i18n.tr("How to play")
                         onTriggered: page_stack.push (about_page)
                     },
                     Action {
+                        text: i18n.tr("High scores")
                         iconSource: "high-scores.svg"
                         onTriggered: {
                             main_page.update_scores ()
@@ -147,6 +152,7 @@ MainView {
                         }
                     },
                     Action {
+                        text: i18n.tr("Reload")
                         iconName: "reload"
                         onTriggered: {
                             if (main_page.is_started () && !main_page.is_complete ())
@@ -700,6 +706,14 @@ MainView {
                 id: about_header
                 // TRANSLATORS: Title of page with game instructions
                 title: i18n.tr ("How to Play")
+
+                trailingActionBar.actions: [
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("Info")
+                        onTriggered: page_stack.push(Qt.resolvedUrl("About.qml"))
+                    }
+                ]
             }
             Flickable {
                 anchors {
