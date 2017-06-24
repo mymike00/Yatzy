@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Romanian language file with diacritics
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -9,14 +9,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-24 01:01+0300\n"
 "PO-Revision-Date: 2017-06-24 11:54+0300\n"
-"Language-Team: \n"
+"Language-Team: Romanian with diacritics (Română)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
 "2:1));\n"
 "X-Generator: Poedit 2.0.1\n"
-"Last-Translator: \n"
+"Last-Translator: Cristian Brînyariu <info@ebeton.ro> \n"
 "Language: ro\n"
 
 #. TRANSLATORS: Title of the About page
