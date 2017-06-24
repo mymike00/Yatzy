@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-24 01:01+0300\n"
+"PO-Revision-Date: 2017-06-24 11:54+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+"X-Generator: Poedit 2.0.1\n"
+"Last-Translator: \n"
+"Language: ro\n"
+
+#. TRANSLATORS: Title of the About page
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:8
+msgid "About"
+msgstr "Despre"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:12
+msgid "Back"
+msgstr "Înapoi"
+
+#. TRANSLATORS: app name
+#. TRANSLATORS: Title of application
+#. TRANSLATORS: Label beside Yatzy score (all dice same value)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:40
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:139
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:680
+msgid "Yatzy"
+msgstr "Yatzy"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:46
+msgid "Version "
+msgstr "Versiunea "
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:70
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Distribuit sub termenii licenţei GNU GPL v3"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:81
+msgid ""
+"Source code available on <a style=\"text-decoration: none;\" href=\"https://"
+"github.com/mymike00/Yatzy\">GitHub.com</a>"
+msgstr ""
+"Codul sursă este disponibil pe <a style=\"text-decoration: none;\" href="
+"\"https://github.com/mymike00/Yatzy\">GitHub.com</a>"
+
+#. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:26
+msgid "Game in progress"
+msgstr "Joc în desfăşurare"
+
+#. TRANSLATORS: Content for dialog shown when starting a new game while one in progress
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:28
+msgid "Are you sure you want to restart this game?"
+msgstr "Sunteţi sigur(ă) că doriţi să o luaţi de la capăt?"
+
+#. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:55
+msgid "Start a<br/>new game"
+msgstr "Începe un <br/>joc nou"
+
+#. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:90
+msgid "Continue<br/>current game"
+msgstr "Continuă<br/>jocul actual"
+
+#. TRANSLATORS: Title for dialog confirming if scores should be cleared
+#. TRANSLATORS: Button in clear scores dialog that clears scores
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:109
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:114
+msgid "Clear scores"
+msgstr "Şterge scorurile"
+
+#. TRANSLATORS: Content for dialog confirming if scores should be cleared
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:111
+msgid "Existing scores will be deleted. This cannot be undone."
+msgstr ""
+"Scorurile existente vor fi şterse. Această acţiune nu poate fi anulată."
+
+#. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:123
+msgid "Keep existing scores"
+msgstr "Păstrează scorurile existente"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:143
+msgid "How to play"
+msgstr "Cu se joacă"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:147
+msgid "High scores"
+msgstr "Cele mai bune scoruri"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:155
+msgid "Reload"
+msgstr "Încarcă din nou"
+
+#. TRANSLATORS: Label shown below high score for a score just achieved
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:247
+msgid "Now"
+msgstr "Acum"
+
+#. TRANSLATORS: Label shown below high score for a score achieved seconds ago
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:252
+#, c-format, qt-plural-format
+msgid "%n second ago"
+msgid_plural "%n seconds ago"
+msgstr[0] "acum %n secundă"
+msgstr[1] "acum %n secunde"
+msgstr[2] "acum %n secunde"
+
+#. TRANSLATORS: Label shown below high score for a score achieved minutes ago
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:258
+#, c-format, qt-plural-format
+msgid "%n minute ago"
+msgid_plural "%n minutes ago"
+msgstr[0] "acum %n minut"
+msgstr[1] "acum %n minute"
+msgstr[2] "acum %n minute"
+
+#. TRANSLATORS: Label shown below high score for a score achieved hours ago
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:264
+#, c-format, qt-plural-format
+msgid "%n hour ago"
+msgid_plural "%n hours ago"
+msgstr[0] "acum %n oră"
+msgstr[1] "acum %n ore"
+msgstr[2] "acum %n ore"
+
+#. TRANSLATORS: Label shown below high score for a score achieved days ago
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:270
+#, c-format, qt-plural-format
+msgid "%n day ago"
+msgid_plural "%n days ago"
+msgstr[0] "acum %n zi"
+msgstr[1] "acum %n zile"
+msgstr[2] "acum %n zile"
+
+#. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:482
+msgid "New Game"
+msgstr "Joc nou"
+
+#. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:484
+#, c-format, qt-plural-format
+msgid "Roll (%n)"
+msgstr "Aruncă (mai ai %n)"
+
+#. TRANSLATORS: Label beside ones score (sum of dice showing 1)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:536
+msgid "Ones"
+msgstr "Unu"
+
+#. TRANSLATORS: Label beside twos score (sum of dice showing 2)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:545
+msgid "Twos"
+msgstr "Doi"
+
+#. TRANSLATORS: Label beside threes score (sum of dice showing 3)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:554
+msgid "Threes"
+msgstr "Trei"
+
+#. TRANSLATORS: Label beside fours score (sum of dice showing 4)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:563
+msgid "Fours"
+msgstr "Patru"
+
+#. TRANSLATORS: Label beside fives score (sum of dice showing 5)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:572
+msgid "Fives"
+msgstr "Cinci"
+
+#. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:581
+msgid "Sixes"
+msgstr "Sase"
+
+#. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:590
+msgid "Bonus"
+msgstr "Premiere"
+
+#. TRANSLATORS: Label beside chance score (sum of all dice)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:599
+msgid "Chance"
+msgstr "Şansă"
+
+#. TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:617
+msgid "One Pair"
+msgstr "O pereche"
+
+#. TRANSLATORS: Label beside two pair score (sum of two pair of dice)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:626
+msgid "Two Pair"
+msgstr "Două perechi"
+
+#. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:635
+msgid "Three of a Kind"
+msgstr "Trei la fel"
+
+#. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:644
+msgid "Four of a Kind"
+msgstr "Careu"
+
+#. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:653
+msgid "Small Straight"
+msgstr "Cinci la rând - mică"
+
+#. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:662
+msgid "Large Straight"
+msgstr "Cinci la rând - mare"
+
+#. TRANSLATORS: Label beside house score (three pair + two pair)
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:671
+msgid "House"
+msgstr "Full"
+
+#. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:698
+#, c-format, qt-plural-format
+msgid "Total: <b>%n</b>"
+msgstr "Total: <b>%n</b>"
+
+#. TRANSLATORS: Title of page with game instructions
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:708
+msgid "How to Play"
+msgstr "Cum se joacă"
+
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:713
+msgid "Info"
+msgstr "Informaţii"
+
+# You really should consider breaking this field in multiple fields :))
+#. TRANSLATORS: Game instructions
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:735
+msgid ""
+"<i>Yatzy</i> is a game where you roll five dice and try and make sets that "
+"score points. The goal is to get the highest score.<br/><br/>The game is "
+"made up of 15 turns. A turn starts by rolling all five dice. You can re-roll "
+"some or all of the dice up to twice. Select dice to stop them from being re-"
+"rolled.<br/><br/>Points are scored by summing the dice that make each set. "
+"The following sets are possible.<br/><i>Ones</i>: Dice showing the number 1."
+"<br/><i>Twos</i>: Dice showing the number 2.<br/><i>Threes</i>: Dice showing "
+"the number 3.<br/><i>Fours</i>: Dice showing the number 4.<br/><i>Fives</i>: "
+"Dice showing the number 5.<br/><i>Sixes</i>: Dice showing the number 6.<br/"
+"><i>Bonus</i>: If the above sets score at least 63 points (an average of "
+"three dice in each set) then a bonus of 50 points is given.<br/><i>One Pair</"
+"i>: Two dice showing the same number (largest pair used).<br/><i>Two Pairs</"
+"i>: Two pairs of dice.<br/><i>Three of a Kind</i>: Three dice showing the "
+"same number.<br/><i>Four of a Kind</i>: Four dice showing the same number."
+"<br/><i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long "
+"Straight</i>: 2, 3, 4, 5, 6 in any order.<br/><i>House</i>: A pair and a "
+"three of a kind.<br/><i>Yatzy</i>: All five dice showing the same number "
+"(worth 50 points).<br/><i>Chance</i>: All dice used for scoring.<br/><br/"
+">You must choose a set for each turn. If the dice do not match the chosen "
+"set rules then zero is scored for that set.<br/><br/>Have fun!<br/>"
+msgstr ""
+"<i>Yatzy</i> este un joc unde se aruncă cinci zaruri iar jucătorul încearcă "
+"să obţină diferite combinaţii care îi aduc puncte. Scopul este să obţii un "
+"scor cât mai mare. <br/><br/>Jocul constă în 15 ture. O tură începe prin "
+"aruncarea tuturor celor 5 zaruri, după aceasta poţi să mai arunci toate sau "
+"doar unele dintre ele încă de două ori. Apasă pe zarurile pe care doreşti să "
+"le păstrezi.<br/><br/>Punctele sunt acordate prin însumarea zarurilor care "
+"formează fiecare combinaţie. Sunt disponibile următoarele combinaţii.<br/"
+"><i>Unu<i/>: Se ţine cont numai de zarurile care arată cifra 1.<br/><i>Doi<i/"
+">: Se ţine cont numai de zarurile care arată cifra 2.<br/><i>Trei<i/>: Se "
+"ţine cont numai de zarurile care arată cifra 3.<br/><i>Patru<i/>: Se ţine "
+"cont numai de zarurile care arată cifra 4.<br/><i>Cinci<i/>: Se ţine cont "
+"numai de zarurile care arată cifra 5.<br/><i>Şase<i/>: Se ţine cont numai de "
+"zarurile care arată cifra 6.<br/><i>Bonus<i/>: Dacă în combinaţiile de mai "
+"sus sa obţinut un scor de cel puţin 63 de puncte (o medie de 3 zaruri în "
+"fiecare combinaţie) atunci se primeşte un bonus de 50 de puncte.<br/><i>O "
+"pereche<i/>: Două zaruri care arată acelaşi număr (se ia în calcul perechea "
+"cea mai mare).<br/><i>Două perechi<i/>:Două perechi de zaruri.<br/><i>Trei "
+"la fel<i/>: Trei zaruri care arată acelaşi număr.<br/><i>Careu<i/>: Patru "
+"zaruri care arată acelaşi număr.<br/><i>Cinci la rând - mică<i/>: Combinaţia "
+"1, 2, 3, 4, 5 în orice ordine a zarurilor.<br/><i>Cinci la rând - mare<i/>: "
+"Combinaţia 2, 3, 4, 5, 6 în orice ordine a zarurilor.<br/><i>Full<i/>: O "
+"pereche şi trei la fel.<br/><i>Yatz<i/>: Toate cele 5 zaruri arătând acelaşi "
+"număr (se acordă 50 de puncte).<br/><i>Şansă<i/>: Se adună toate zarurile la "
+"scor.<br/><br/>Trebuie să alegi un set pentru fiecare tură. Dacă zarurile "
+"afişate nu se potrivesc combinaţiei aleasă atunci vei primii zero puncte.<br/"
+"><br/>Distracţie plăcută!<br/>"
+
+#. TRANSLATORS: Title of page showing high scores
+#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:770
+msgid "High Scores"
+msgstr "Cele mai bune scoruri"
