@@ -1,5 +1,5 @@
 # Romanian language file with diacritics
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Brînzariu Cristian <info@ebeton.ro>, 2017.
 #
