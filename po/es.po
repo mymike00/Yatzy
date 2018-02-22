@@ -8,24 +8,23 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-22 16:36+0000\n"
-"PO-Revision-Date: 2017-06-22 18:10+0200\n"
-"Last-Translator: Francisco Molinero <paco@byasl.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2018-02-23 00:20+0200\n"
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: UBports Spanish Team\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #. TRANSLATORS: Title of the About page
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:8
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:12
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #. TRANSLATORS: app name
 #. TRANSLATORS: Title of application
@@ -38,17 +37,19 @@ msgstr "Yatzy"
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:46
 msgid "Version "
-msgstr ""
+msgstr "Versión "
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:70
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Publicado bajo los términos de la GNU GPL v3"
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:81
 msgid ""
 "Source code available on <a style=\"text-decoration: none;\" href=\"https://"
 "github.com/mymike00/Yatzy\">GitHub.com</a>"
 msgstr ""
+"Código fuente disponible en <a style=\"text-decoration: none;\" href=\"https://"
+"github.com/mymike00/Yatzy\">GitHub.com</a>"
 
 #. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:26
@@ -99,7 +100,7 @@ msgstr "Mayores puntuaciones"
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:155
 msgid "Reload"
-msgstr ""
+msgstr "Recargar"
 
 #. TRANSLATORS: Label shown below high score for a score just achieved
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:247
@@ -237,7 +238,7 @@ msgstr "Cómo jugar"
 
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:713
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #. TRANSLATORS: Game instructions
 #: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:735
