@@ -18,6 +18,8 @@ MainView {
     width: units.gu(40)
     height: units.gu(75)
 
+    property bool mode: false;
+
     Component {
         id: confirm_new_game_dialog
         Dialog {
@@ -136,7 +138,8 @@ MainView {
             header: PageHeader {
                 id: pageHeader
                 // TRANSLATORS: Title of application
-                title: i18n.tr ("Yatzy")
+                title: mode ? i18n.tr ("Kniffel") : i18n.tr ("Yatzy")
+                trailingActionBar.numberOfSlots: 4
                 trailingActionBar.actions: [
                     Action {
                         iconName: "info"
@@ -160,6 +163,14 @@ MainView {
                             else
                                 main_page.restart ()
                         }
+                    },
+                    Action {
+                        text: i18n.tr("Mode")
+                        iconName: "settings"
+                        onTriggered: {
+                            mode = !mode
+                            main_page.restart ()
+                        }
                     }
                 ]
             }
@@ -169,8 +180,8 @@ MainView {
             property var dice: [ die0, die1, die2, die3, die4 ]
             property var rolling: die0.rolling || die1.rolling || die2.rolling || die3.rolling || die4.rolling
             property int reroll_count: 0
-            property var score_labels: [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, one_pair_score_label, two_pair_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ]
-            property int total_score: ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + one_pair_score_label.effective_score + two_pair_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score
+            property var score_labels: mode ? [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ] : [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, one_pair_score_label, two_pair_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ]
+            property int total_score: mode ? ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score : ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + one_pair_score_label.effective_score + two_pair_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score
             property bool game_is_over: false
 
             function roll () {
@@ -286,7 +297,10 @@ MainView {
             }
 
             function get_database () {
-                return LocalStorage.openDatabaseSync ("scores", "1", "Yatzy Scores", 0)
+                if (mode)
+                    return LocalStorage.openDatabaseSync ("scoresk", "1", "Kniffel Scores", 1)
+                else
+                    return LocalStorage.openDatabaseSync ("scores", "1", "Yatzy Scores", 0)
             }
 
             function is_started () {
@@ -376,7 +390,10 @@ MainView {
                 var counts = get_counts ()
                 for (var i = 1; i <= 6; i++)
                     if (counts[i] >= 3)
-                        return i * 3
+                        if (mode)
+                            return sum_total ()
+                        else
+                            return i * 3
                 return 0
             }
 
@@ -384,22 +401,29 @@ MainView {
                 var counts = get_counts ()
                 for (var i = 1; i <= 6; i++)
                     if (counts[i] >= 4)
-                        return i * 4
+                        if (mode)
+                            return sum_total ()
+                        else
+                            return i * 4
                 return 0
             }
 
             function small_straight_score () {
                 var counts = get_counts ()
-                if (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1)
+                if (!mode && (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1))
                     return sum_total ()
+                else if (mode && ((counts[1] >= 1 && counts[2] >= 1 && counts[3] >= 1 && counts[4] >= 1) || (counts[2] >= 1 && counts[3] >= 1 && counts[4] >= 1 && counts[5] >= 1) || (counts[3] >= 1 && counts[4] >= 1 && counts[5] >= 1 && counts[6] >= 1)))
+                    return 30
                 else
                     return 0
             }
 
             function large_straight_score () {
                 var counts = get_counts ()
-                if (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1)
+                if (!mode && (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1))
                     return sum_total ()
+                else if (mode && (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1) || (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1))
+                    return 40
                 else
                     return 0
             }
@@ -416,7 +440,10 @@ MainView {
                 }
 
                 if (have_3 && have_2)
-                    return sum_total ()
+                    if (mode)
+                        return 25
+                    else
+                        return sum_total ()
                 else
                     return 0
             }
@@ -592,7 +619,15 @@ MainView {
                         ScoreLabel {
                             id: bonus_score_label
                             enabled: !main_page.rolling
-                            actual_score: (ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score) >= 63 ? 50 : 0
+                            actual_score: {
+                                if ((ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score) >= 63)
+                                    if (mode)
+                                        return 35
+                                    else
+                                        return 50
+                                else
+                                    return 0
+                            }
                         }
                         Label {
                             // TRANSLATORS: Label beside chance score (sum of all dice)
@@ -614,19 +649,23 @@ MainView {
 
                         Label {
                             // TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
+                            visible: !mode
                             text: i18n.tr ("One Pair")
                         }
                         ScoreLabel {
                             id: one_pair_score_label
+                            visible: !mode
                             enabled: !main_page.rolling
                             onSelected: main_page.next_turn ()
                         }
                         Label {
                             // TRANSLATORS: Label beside two pair score (sum of two pair of dice)
+                            visible: !mode
                             text: i18n.tr ("Two Pair")
                         }
                         ScoreLabel {
                             id: two_pair_score_label
+                            visible: !mode
                             enabled: !main_page.rolling
                             onSelected: main_page.next_turn ()
                         }
