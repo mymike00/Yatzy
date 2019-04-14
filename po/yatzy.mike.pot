@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the yatzy.mike package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: yatzy.mike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-22 16:36+0000\n"
+"POT-Creation-Date: 2019-04-14 20:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,226 +19,224 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #. TRANSLATORS: Title of the About page
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:8
+#: ../qml/About.qml:8
 msgid "About"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:12
+#: ../qml/About.qml:12
 msgid "Back"
 msgstr ""
 
 #. TRANSLATORS: app name
-#. TRANSLATORS: Title of application
 #. TRANSLATORS: Label beside Yatzy score (all dice same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:40
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:139
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:680
+#: ../qml/About.qml:40 ../qml/Main.qml:141 ../qml/Main.qml:719
+#: yatzy.desktop.in.h:1
 msgid "Yatzy"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:46
-msgid "Version "
+#: ../qml/About.qml:46
+msgid "Version %1"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:70
+#: ../qml/About.qml:70
 msgid "Released under the terms of the GNU GPL v3"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:81
+#: ../qml/About.qml:81
 msgid ""
 "Source code available on <a style=\"text-decoration: none;\" href=\"https://"
 "github.com/mymike00/Yatzy\">GitHub.com</a>"
 msgstr ""
 
 #. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:26
+#: ../qml/Main.qml:28
 msgid "Game in progress"
 msgstr ""
 
 #. TRANSLATORS: Content for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:28
+#: ../qml/Main.qml:30
 msgid "Are you sure you want to restart this game?"
 msgstr ""
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:55
+#: ../qml/Main.qml:57
 msgid "Start a<br/>new game"
 msgstr ""
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:90
+#: ../qml/Main.qml:92
 msgid "Continue<br/>current game"
 msgstr ""
 
 #. TRANSLATORS: Title for dialog confirming if scores should be cleared
 #. TRANSLATORS: Button in clear scores dialog that clears scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:109
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:114
+#: ../qml/Main.qml:111 ../qml/Main.qml:116
 msgid "Clear scores"
 msgstr ""
 
 #. TRANSLATORS: Content for dialog confirming if scores should be cleared
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:111
+#: ../qml/Main.qml:113
 msgid "Existing scores will be deleted. This cannot be undone."
 msgstr ""
 
 #. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:123
+#: ../qml/Main.qml:125
 msgid "Keep existing scores"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:143
+#. TRANSLATORS: Title of application
+#: ../qml/Main.qml:141
+msgid "Kniffel"
+msgstr ""
+
+#: ../qml/Main.qml:146
 msgid "How to play"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:147
+#: ../qml/Main.qml:150
 msgid "High scores"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:155
+#: ../qml/Main.qml:158
 msgid "Reload"
 msgstr ""
 
+#: ../qml/Main.qml:168
+msgid "Mode"
+msgstr ""
+
 #. TRANSLATORS: Label shown below high score for a score just achieved
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:247
+#: ../qml/Main.qml:258
 msgid "Now"
 msgstr ""
 
 #. TRANSLATORS: Label shown below high score for a score achieved seconds ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:252
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:263
 msgid "%n second ago"
 msgid_plural "%n seconds ago"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: Label shown below high score for a score achieved minutes ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:258
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:269
 msgid "%n minute ago"
 msgid_plural "%n minutes ago"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: Label shown below high score for a score achieved hours ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:264
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:275
 msgid "%n hour ago"
 msgid_plural "%n hours ago"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: Label shown below high score for a score achieved days ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:270
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:281
 msgid "%n day ago"
 msgid_plural "%n days ago"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:482
+#: ../qml/Main.qml:509
 msgid "New Game"
 msgstr ""
 
 #. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:484
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:511
 msgid "Roll (%n)"
 msgstr ""
 
 #. TRANSLATORS: Label beside ones score (sum of dice showing 1)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:536
+#: ../qml/Main.qml:563
 msgid "Ones"
 msgstr ""
 
 #. TRANSLATORS: Label beside twos score (sum of dice showing 2)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:545
+#: ../qml/Main.qml:572
 msgid "Twos"
 msgstr ""
 
 #. TRANSLATORS: Label beside threes score (sum of dice showing 3)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:554
+#: ../qml/Main.qml:581
 msgid "Threes"
 msgstr ""
 
 #. TRANSLATORS: Label beside fours score (sum of dice showing 4)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:563
+#: ../qml/Main.qml:590
 msgid "Fours"
 msgstr ""
 
 #. TRANSLATORS: Label beside fives score (sum of dice showing 5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:572
+#: ../qml/Main.qml:599
 msgid "Fives"
 msgstr ""
 
 #. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:581
+#: ../qml/Main.qml:608
 msgid "Sixes"
 msgstr ""
 
 #. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:590
+#: ../qml/Main.qml:617
 msgid "Bonus"
 msgstr ""
 
 #. TRANSLATORS: Label beside chance score (sum of all dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:599
+#: ../qml/Main.qml:634
 msgid "Chance"
 msgstr ""
 
-#. TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:617
+#: ../qml/Main.qml:653
 msgid "One Pair"
 msgstr ""
 
-#. TRANSLATORS: Label beside two pair score (sum of two pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:626
+#: ../qml/Main.qml:664
 msgid "Two Pair"
 msgstr ""
 
 #. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:635
+#: ../qml/Main.qml:674
 msgid "Three of a Kind"
 msgstr ""
 
 #. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:644
+#: ../qml/Main.qml:683
 msgid "Four of a Kind"
 msgstr ""
 
 #. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:653
+#: ../qml/Main.qml:692
 msgid "Small Straight"
 msgstr ""
 
 #. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:662
+#: ../qml/Main.qml:701
 msgid "Large Straight"
 msgstr ""
 
 #. TRANSLATORS: Label beside house score (three pair + two pair)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:671
+#: ../qml/Main.qml:710
 msgid "House"
 msgstr ""
 
 #. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:698
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:737
 msgid "Total: <b>%n</b>"
 msgstr ""
 
 #. TRANSLATORS: Title of page with game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:708
+#: ../qml/Main.qml:747
 msgid "How to Play"
 msgstr ""
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:713
+#: ../qml/Main.qml:752
 msgid "Info"
 msgstr ""
 
 #. TRANSLATORS: Game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:735
+#: ../qml/Main.qml:774
 msgid ""
 "<i>Yatzy</i> is a game where you roll five dice and try and make sets that "
 "score points. The goal is to get the highest score.<br/><br/>The game is "
@@ -263,6 +261,6 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: Title of page showing high scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:770
+#: ../qml/Main.qml:809
 msgid "High Scores"
 msgstr ""

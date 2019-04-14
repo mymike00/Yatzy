@@ -148,7 +148,7 @@ MainView {
                     },
                     Action {
                         text: i18n.tr("High scores")
-                        iconSource: "high-scores.svg"
+                        iconSource: "../assets/high-scores.svg"
                         onTriggered: {
                             main_page.update_scores ()
                             page_stack.push (scores_page)

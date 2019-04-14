@@ -43,7 +43,7 @@ Page {
                 }
 
                 Text {
-                    text: i18n.tr("Version ") + "0.2"
+                    text: i18n.tr("Version %1").arg("0.3")
                     anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
@@ -52,7 +52,7 @@ Page {
                 id: logo
                 width: units.gu(17)
                 source: Image {
-                    source: "Yatzy.svg"
+                    source: "../assets/Yatzy.svg"
                 }
                 anchors.horizontalCenter: parent.horizontalCenter
             }
