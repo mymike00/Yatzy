@@ -18,20 +18,24 @@ MainView {
     width: units.gu(40)
     height: units.gu(75)
 
-    property bool mode: false;
+    property bool mode: false
+    // change_mode says if the confirm_new_game_dialog is used to restart a game (true) or when you change mode (false)
+    property bool r: true
 
     Component {
         id: confirm_new_game_dialog
         Dialog {
             id: d
             // TRANSLATORS: Title for dialog shown when starting a new game while one in progress
-            title: i18n.tr ("Game in progress")
+            title: r ? i18n.tr ("Game in progress")
+            // TRANSLATORS: Title for dialog shown when switching to another game mode while a game is in progress
+            : i18n.tr ("Change game mode")
+
             // TRANSLATORS: Content for dialog shown when starting a new game while one in progress
             text: i18n.tr ("Are you sure you want to restart this game?")
             Row {
                 spacing: units.gu(1)
                 width: d.width
-                Component.onCompleted: console.log(width)
 
                 Button {
                     id: restartButton
@@ -46,7 +50,7 @@ MainView {
 
                         Icon {
                             anchors.horizontalCenter: parent.horizontalCenter
-                            name: "reset"
+                            name: r ? "reset" : "swap"
                             width: height
                             height: units.gu(5) //< parent.height*3/5 ? parent.height*3/5 : units.gu(5)
                             color: "white"
@@ -54,7 +58,7 @@ MainView {
 
                         Text {
                             // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-                            text: i18n.tr("Start a<br/>new game")
+                            text: r ? i18n.tr("Start a<br/>new game") : i18n.tr ("Change mode<br/>and reset")
                             horizontalAlignment: Text.AlignHCenter
                             color: "white"
                         }
@@ -62,8 +66,10 @@ MainView {
 
                     // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
                     //text: i18n.tr ("Restart game")
-                    color: UbuntuColors.red
+                    color: r ? UbuntuColors.red : UbuntuColors.orange
                     onClicked: {
+                        if (!r)
+                            mode = !mode
                         main_page.restart ()
                         PopupUtils.close (d)
                     }
@@ -81,7 +87,7 @@ MainView {
 
                         Icon {
                             anchors.horizontalCenter: parent.horizontalCenter
-                            name: "media-playback-start"
+                            name: r ? "media-playback-start" : "cancel"
                             width: height
                             height: units.gu(5) //< parent.height*3/5 ? parent.height*3/5 : units.gu(5)
                             color: "white"
@@ -158,8 +164,10 @@ MainView {
                         text: i18n.tr("Reload")
                         iconName: "reload"
                         onTriggered: {
-                            if (main_page.is_started () && !main_page.is_complete ())
+                            if (main_page.is_started () && !main_page.is_complete ()) {
+                                r = true
                                 PopupUtils.open (confirm_new_game_dialog)
+                            }
                             else
                                 main_page.restart ()
                         }
@@ -168,8 +176,14 @@ MainView {
                         text: i18n.tr("Mode")
                         iconName: "settings"
                         onTriggered: {
-                            mode = !mode
-                            main_page.restart ()
+                            if (main_page.is_started () && !main_page.is_complete ()) {
+                                r = false
+                                PopupUtils.open (confirm_new_game_dialog)
+                            }
+                            else {
+                                mode = !mode
+                                main_page.restart ()
+                            }
                         }
                     }
                 ]
