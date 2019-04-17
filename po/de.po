@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: yatzy\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-18 00:58+0200\n"
-"PO-Revision-Date: 2019-04-18 01:01+0200\n"
+"PO-Revision-Date: 2019-04-18 01:07+0200\n"
 "Last-Translator: Simon Stürz <stuerz.simon@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "Language: de\n"
@@ -73,7 +73,7 @@ msgstr "Ein neues<br/>Spiel beginnen"
 
 #: ../qml/Main.qml:62
 msgid "Change mode<br/>and reset"
-msgstr "Spielmodus wecheln<br/>und neu beginnen"
+msgstr "Modus wecheln<br/>und neu beginnen"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
 #: ../qml/Main.qml:99
