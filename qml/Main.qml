@@ -785,9 +785,9 @@ MainView {
                     wrapMode: Text.Wrap
                     textFormat: Text.StyledText
                     // TRANSLATORS: Game instructions
-                    text: i18n.tr ("<i>Yatzy</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.<br/>\
+                    text: i18n.tr ("<i>Yatzy/Kniffel</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.<br/>\
 <br/>\
-The game is made up of 15 turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.<br/>\
+The game is made up of 15 turns in Yatzy or 13 turns in Kniffel. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.<br/>\
 <br/>\
 Points are scored by summing the dice that make each set. The following sets are possible.<br/>\
 <i>Ones</i>: Dice showing the number 1.<br/>\
@@ -796,14 +796,14 @@ Points are scored by summing the dice that make each set. The following sets are
 <i>Fours</i>: Dice showing the number 4.<br/>\
 <i>Fives</i>: Dice showing the number 5.<br/>\
 <i>Sixes</i>: Dice showing the number 6.<br/>\
-<i>Bonus</i>: If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points is given.<br/>\
-<i>One Pair</i>: Two dice showing the same number (largest pair used).<br/>\
-<i>Two Pairs</i>: Two pairs of dice.<br/>\
-<i>Three of a Kind</i>: Three dice showing the same number.<br/>\
-<i>Four of a Kind</i>: Four dice showing the same number.<br/>\
-<i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/>\
-<i>Long Straight</i>: 2, 3, 4, 5, 6 in any order.<br/>\
-<i>House</i>: A pair and a three of a kind.<br/>\
+<i>Bonus</i>: If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points (Yatzy) or 35 points (Kniffel) is given.<br/>\
+<i>One Pair (Yatzy only)</i>: Two dice showing the same number (largest pair used).<br/>\
+<i>Two Pairs (Yatzy only)</i>: Two pairs of dice.<br/>\
+<i>Three of a Kind</i>: Three dice showing the same number. In Yatzy the eyes of equal dice are sum up, in Kniffel all eyes.<br/>\
+<i>Four of a Kind</i>: Four dice showing the same number. In Yatzy the eyes of equal dice are sum up, in Kniffel all eyes.<br/>\
+<i>Small Straight</i>: 1 to 5 in any order -> 15 points (Yatzy), row of four in any order -> 30 points (Kniffel).<br/>\
+<i>Long Straight</i>: 2 to 6 in any order -> 20 points (Yatzy), row of five in any order -> 40 points (Kniffel).<br/>\
+<i>House</i>: A pair and a three of a kind sum up (Yatzy), -> 25 points (Kniffel).<br/>\
 <i>Yatzy</i>: All five dice showing the same number (worth 50 points).<br/>\
 <i>Chance</i>: All dice used for scoring.<br/>\
 <br/>\
