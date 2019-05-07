@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yatzy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 00:58+0200\n"
-"PO-Revision-Date: 2019-04-18 01:10+0200\n"
+"POT-Creation-Date: 2019-05-07 15:53+0200\n"
+"PO-Revision-Date: 2019-05-07 16:02+0200\n"
 "Last-Translator: Simon Stürz <stuerz.simon@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "Language: de\n"
@@ -18,38 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2016-09-27 07:09+0000\n"
 "X-Generator: Poedit 1.8.7.1\n"
-
-#. TRANSLATORS: Title of the About page
-#: ../qml/About.qml:8
-msgid "About"
-msgstr "Über"
-
-#: ../qml/About.qml:12
-msgid "Back"
-msgstr "Zurück"
-
-#. TRANSLATORS: app name
-#. TRANSLATORS: Label beside Yatzy score (all dice same value)
-#: ../qml/About.qml:40 ../qml/Main.qml:148 ../qml/Main.qml:734
-#: yatzy.desktop.in.h:1
-msgid "Yatzy"
-msgstr "Yatzy"
-
-#: ../qml/About.qml:46
-msgid "Version %1"
-msgstr "Version %1"
-
-#: ../qml/About.qml:70
-msgid "Released under the terms of the GNU GPL v3"
-msgstr "Veröffentlich unter den Bestimmungen von GNU GPL v3"
-
-#: ../qml/About.qml:81
-msgid ""
-"Source code available on <a style=\"text-decoration: none;\" href=\"https://"
-"github.com/mymike00/Yatzy\">GitHub.com</a>"
-msgstr ""
-"Quellcode verfügbar unter <a style=\"text-decoration: none;\" href=\"https://"
-"github.com/mymike00/Yatzy\">GitHub.com</a>"
 
 #. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
 #: ../qml/Main.qml:30
@@ -67,243 +35,334 @@ msgid "Are you sure you want to restart this game?"
 msgstr "Sind Sie sicher, dass Sie das Spiel neu starten möchten?"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: ../qml/Main.qml:62
+#: ../qml/Main.qml:61
 msgid "Start a<br/>new game"
 msgstr "Ein neues<br/>Spiel beginnen"
 
-#: ../qml/Main.qml:62
+#: ../qml/Main.qml:61
 msgid "Change mode<br/>and reset"
 msgstr "Modus wechseln<br/>und neu beginnen"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: ../qml/Main.qml:99
+#: ../qml/Main.qml:98
 msgid "Continue<br/>current game"
 msgstr "Aktuelles<br/>Spiel fortsetzen"
 
 #. TRANSLATORS: Title for dialog confirming if scores should be cleared
 #. TRANSLATORS: Button in clear scores dialog that clears scores
-#: ../qml/Main.qml:118 ../qml/Main.qml:123
+#: ../qml/Main.qml:117 ../qml/Main.qml:122
 msgid "Clear scores"
 msgstr "Spielstände löschen"
 
 #. TRANSLATORS: Content for dialog confirming if scores should be cleared
-#: ../qml/Main.qml:120
+#: ../qml/Main.qml:119
 msgid "Existing scores will be deleted. This cannot be undone."
 msgstr ""
 "Die aktuellen Spielstände werden gelöscht. Das kann nicht rückgängig gemacht "
 "werden."
 
 #. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
-#: ../qml/Main.qml:132
+#: ../qml/Main.qml:131
 msgid "Keep existing scores"
 msgstr "Aktuelle Spielstände behalten"
 
 #. TRANSLATORS: Title of application
-#: ../qml/Main.qml:148
+#: ../qml/Main.qml:147
 msgid "Kniffel"
 msgstr "Kniffel"
 
-#: ../qml/Main.qml:153
+#. TRANSLATORS: Label beside Yatzy score (all dice same value)
+#. TRANSLATORS: app name
+#: ../qml/Main.qml:147 ../qml/Main.qml:733 ../qml/About.qml:40
+#: yatzy.desktop.in.h:1
+msgid "Yatzy"
+msgstr "Yatzy"
+
+#: ../qml/Main.qml:152
 #, fuzzy
 msgid "How to play"
 msgstr "Spielanleitung"
 
-#: ../qml/Main.qml:157
+#: ../qml/Main.qml:156
 #, fuzzy
 msgid "High scores"
 msgstr "Bestenliste"
 
-#: ../qml/Main.qml:165
+#: ../qml/Main.qml:164
 msgid "Reload"
 msgstr "Neustarten"
 
-#: ../qml/Main.qml:177
+#: ../qml/Main.qml:176
 msgid "Mode"
 msgstr "Spielmodus"
 
 #. TRANSLATORS: Label shown below high score for a score just achieved
-#: ../qml/Main.qml:273
+#: ../qml/Main.qml:272
 msgid "Now"
 msgstr "Jetzt"
 
 #. TRANSLATORS: Label shown below high score for a score achieved seconds ago
-#: ../qml/Main.qml:278
+#: ../qml/Main.qml:277
 msgid "%n second ago"
 msgid_plural "%n seconds ago"
 msgstr[0] "vor %n Sekunde"
 msgstr[1] "vor %n Sekunden"
 
 #. TRANSLATORS: Label shown below high score for a score achieved minutes ago
-#: ../qml/Main.qml:284
+#: ../qml/Main.qml:283
 msgid "%n minute ago"
 msgid_plural "%n minutes ago"
 msgstr[0] "vor %n Minute"
 msgstr[1] "vor %n Minuten"
 
 #. TRANSLATORS: Label shown below high score for a score achieved hours ago
-#: ../qml/Main.qml:290
+#: ../qml/Main.qml:289
 msgid "%n hour ago"
 msgid_plural "%n hours ago"
 msgstr[0] "vor %n Stunde"
 msgstr[1] "vor %n Stunden"
 
 #. TRANSLATORS: Label shown below high score for a score achieved days ago
-#: ../qml/Main.qml:296
+#: ../qml/Main.qml:295
 msgid "%n day ago"
 msgid_plural "%n days ago"
 msgstr[0] "vor %n Tag"
 msgstr[1] "vor %n Tagen"
 
 #. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
-#: ../qml/Main.qml:524
+#: ../qml/Main.qml:523
 msgid "New Game"
 msgstr "Neues Spiel"
 
 #. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
-#: ../qml/Main.qml:526
+#: ../qml/Main.qml:525
 msgid "Roll (%n)"
 msgstr "Würfeln (%n)"
 
 #. TRANSLATORS: Label beside ones score (sum of dice showing 1)
-#: ../qml/Main.qml:578
+#: ../qml/Main.qml:577
 msgid "Ones"
 msgstr "Einser"
 
 #. TRANSLATORS: Label beside twos score (sum of dice showing 2)
-#: ../qml/Main.qml:587
+#: ../qml/Main.qml:586
 msgid "Twos"
 msgstr "Zweier"
 
 #. TRANSLATORS: Label beside threes score (sum of dice showing 3)
-#: ../qml/Main.qml:596
+#: ../qml/Main.qml:595
 msgid "Threes"
 msgstr "Dreier"
 
 #. TRANSLATORS: Label beside fours score (sum of dice showing 4)
-#: ../qml/Main.qml:605
+#: ../qml/Main.qml:604
 msgid "Fours"
 msgstr "Vierer"
 
 #. TRANSLATORS: Label beside fives score (sum of dice showing 5)
-#: ../qml/Main.qml:614
+#: ../qml/Main.qml:613
 msgid "Fives"
 msgstr "Fünfer"
 
 #. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
-#: ../qml/Main.qml:623
+#: ../qml/Main.qml:622
 msgid "Sixes"
 msgstr "Sechser"
 
 #. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
-#: ../qml/Main.qml:632
+#: ../qml/Main.qml:631
 msgid "Bonus"
 msgstr "Bonus"
 
 #. TRANSLATORS: Label beside chance score (sum of all dice)
-#: ../qml/Main.qml:649
+#: ../qml/Main.qml:648
 msgid "Chance"
 msgstr "Chance"
 
-#: ../qml/Main.qml:668
+#: ../qml/Main.qml:667
 msgid "One Pair"
 msgstr "Ein Paar"
 
-#: ../qml/Main.qml:679
+#: ../qml/Main.qml:678
 msgid "Two Pair"
 msgstr "Zwei Paare"
 
 #. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
-#: ../qml/Main.qml:689
+#: ../qml/Main.qml:688
 msgid "Three of a Kind"
 msgstr "Drei Gleiche"
 
 #. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
-#: ../qml/Main.qml:698
+#: ../qml/Main.qml:697
 msgid "Four of a Kind"
 msgstr "Vier Gleiche"
 
 #. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
-#: ../qml/Main.qml:707
+#: ../qml/Main.qml:706
 msgid "Small Straight"
 msgstr "Kleine Straße"
 
 #. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
-#: ../qml/Main.qml:716
+#: ../qml/Main.qml:715
 msgid "Large Straight"
 msgstr "Große Straße"
 
 #. TRANSLATORS: Label beside house score (three pair + two pair)
-#: ../qml/Main.qml:725
+#: ../qml/Main.qml:724
 msgid "House"
 msgstr "Volles Haus"
 
 #. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
-#: ../qml/Main.qml:752
+#: ../qml/Main.qml:751
 msgid "Total: <b>%n</b>"
 msgstr "Gesamt: <b>%n</b>"
 
 #. TRANSLATORS: Title of page with game instructions
-#: ../qml/Main.qml:762
+#: ../qml/Main.qml:761
 msgid "How to Play"
 msgstr "Spielanleitung"
 
-#: ../qml/Main.qml:767
+#: ../qml/Main.qml:766
 msgid "Info"
 msgstr "Info"
 
 #. TRANSLATORS: Game instructions
-#: ../qml/Main.qml:789
+#: ../qml/Main.qml:788
 msgid ""
-"<i>Yatzy</i> is a game where you roll five dice and try and make sets that "
-"score points. The goal is to get the highest score.<br/><br/>The game is "
-"made up of 15 turns. A turn starts by rolling all five dice. You can re-roll "
-"some or all of the dice up to twice. Select dice to stop them from being re-"
-"rolled.<br/><br/>Points are scored by summing the dice that make each set. "
-"The following sets are possible.<br/><i>Ones</i>: Dice showing the number 1."
-"<br/><i>Twos</i>: Dice showing the number 2.<br/><i>Threes</i>: Dice showing "
-"the number 3.<br/><i>Fours</i>: Dice showing the number 4.<br/><i>Fives</i>: "
-"Dice showing the number 5.<br/><i>Sixes</i>: Dice showing the number 6.<br/"
-"><i>Bonus</i>: If the above sets score at least 63 points (an average of "
-"three dice in each set) then a bonus of 50 points is given.<br/><i>One Pair</"
-"i>: Two dice showing the same number (largest pair used).<br/><i>Two Pairs</"
-"i>: Two pairs of dice.<br/><i>Three of a Kind</i>: Three dice showing the "
-"same number.<br/><i>Four of a Kind</i>: Four dice showing the same number."
-"<br/><i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long "
-"Straight</i>: 2, 3, 4, 5, 6 in any order.<br/><i>House</i>: A pair and a "
-"three of a kind.<br/><i>Yatzy</i>: All five dice showing the same number "
-"(worth 50 points).<br/><i>Chance</i>: All dice used for scoring.<br/><br/"
-">You must choose a set for each turn. If the dice do not match the chosen "
-"set rules then zero is scored for that set.<br/><br/>Have fun!<br/>"
+"<i>Yatzy/Kniffel</i> is a game where you roll five dice and try and make "
+"sets that score points. The goal is to get the highest score.<br/><br/>The "
+"game is made up of 15 turns in Yatzy or 13 turns in Kniffel. A turn starts "
+"by rolling all five dice. You can re-roll some or all of the dice up to "
+"twice. Select dice to stop them from being re-rolled.<br/><br/>Points are "
+"scored by summing the dice that make each set. The following sets are "
+"possible.<br/><i>Ones</i>: Dice showing the number 1.<br/><i>Twos</i>: Dice "
+"showing the number 2.<br/><i>Threes</i>: Dice showing the number 3.<br/"
+"><i>Fours</i>: Dice showing the number 4.<br/><i>Fives</i>: Dice showing the "
+"number 5.<br/><i>Sixes</i>: Dice showing the number 6.<br/><i>Bonus</i>: If "
+"the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 50 points (Yatzy) or 35 points (Kniffel) is given.<br/"
+"><i>One Pair (Yatzy only)</i>: Two dice showing the same number (largest "
+"pair used).<br/><i>Two Pairs (Yatzy only)</i>: Two pairs of dice.<br/"
+"><i>Three of a Kind</i>: Three dice showing the same number. In Yatzy the "
+"eyes of equal dice are sum up, in Kniffel all eyes.<br/><i>Four of a Kind</"
+"i>: Four dice showing the same number. In Yatzy the eyes of equal dice are "
+"sum up, in Kniffel all eyes.<br/><i>Small Straight</i>: 1 to 5 in any order -"
+"> 15 points (Yatzy), row of four in any order -> 30 points (Kniffel).<br/"
+"><i>Long Straight</i>: 2 to 6 in any order -> 20 points (Yatzy), row of five "
+"in any order -> 40 points (Kniffel).<br/><i>House</i>: A pair and a three of "
+"a kind sum up (Yatzy), -> 25 points (Kniffel).<br/><i>Yatzy</i>: All five "
+"dice showing the same number (worth 50 points).<br/><i>Chance</i>: All dice "
+"used for scoring.<br/><br/>You must choose a set for each turn. If the dice "
+"do not match the chosen set rules then zero is scored for that set.<br/><br/"
+">Have fun!<br/>"
 msgstr ""
-"<i>Yatzy</i> ist ein Würfelspiel mit fünf Würfel welches sich über 15 Runden "
-"zieht, bei dem es nicht nur aufs Würfelglück ankommt sondern gilt es die "
-"Augenzahlen möglichst günstig zu platzieren. Das Ziel ist es eine möglichst "
-"hohe Punktezahl zu erreichen. <br/><br/>Eine Runde beginnt mit dem werfen "
-"von fünf Würfeln. Es können alle oder nur einzelne Würfel erneut geworfen "
-"werden. Ein ausgewählter Würfel wird nicht erneut geworfen.<br/><br/>Die "
-"Punkte werden von jedem Würfel zusammengezählt je nach ausgewählter "
-"Konstellation. Folgende Konstellationen sind möglich.<br/><i>Einser</i>: "
-"Würfel mit der Augenzahl 1.<br/><i>Zweier</i>: Würfel mit der Augenzahl 2."
-"<br/><i>Dreier</i>: Würfel mit der Augenzahl 3.<br/><i>Vierer</i>: Würfel "
-"mit der Augenzahl 4.<br/><i>Fünfer</i>: Würfel mit der Augenzahl 5.<br/"
-"><i>Sechser</i>: Würfel mit der Augenzahl 6.<br/><i>Bonus</i>: Wenn die "
-"Summe der bisherigen Punkte mindestens 63 erreicht, bekommt der Spieler "
-"einen Bonus von 50 Punkten.<br/><i>Ein Paar</i>: Zwei Würfel mit der selben "
-"Zahl (das höchste Paar).<br/><i>Zwei Paare</i>: Zwei Würfelpaare mit der "
-"jeweils selben Zahl.<br/><i>Drei Gleiche</i>: Drei Würfel mit der selben "
-"Zahl.<br/><i>Vier Gleiche</i>: Vier Würfel mit der selben Zahl.<br/"
-"><i>Kleine Straße</i>: Eine Reihe von 1,2,3,4 und 5.<br/><i>Große Straße</"
-"i>: Eine Reihe von 2,3,4,5 und 6.<br/><i>Volles Haus</i>: Eine Paar und drei "
-"Gleiche.<br/><i>Yatzy</i>: Alle fünf Würfel haben die gleiche Zahl (50 "
-"Punkte wert).<br/><i>Chance</i>: Die Summe aller Würfel.<br/><br/>In jeder "
-"Runde muss eine Konstellation ausgewählt und eingetragen werden. Wenn die "
-"Würfel in keine Konstellation passen muss eine 0 eingetragen werden.<br/><br/"
-">Viel Spaß!<br/>"
+"<i>Yatzy/Kniffel</i> ist ein Würfelspiel mit fünf Würfel welches sich über "
+"15 Runden in Yatzy oder 13 Runden in Kniffel zieht, bei dem es nicht nur "
+"aufs Würfelglück ankommt sondern gilt es die Augenzahlen möglichst günstig "
+"zu platzieren. Das Ziel ist es eine möglichst hohe Punktezahl zu erreichen. "
+"<br/><br/>Eine Runde beginnt mit dem werfen von fünf Würfeln. Es können alle "
+"oder nur einzelne Würfel erneut geworfen werden. Ein ausgewählter Würfel "
+"wird nicht erneut geworfen.<br/><br/>Die Punkte werden von jedem Würfel "
+"zusammengezählt je nach ausgewählter Konstellation. Folgende Konstellationen "
+"sind möglich.<br/><i>Einser</i>: Würfel mit der Augenzahl 1.<br/><i>Zweier</"
+"i>: Würfel mit der Augenzahl 2.<br/><i>Dreier</i>: Würfel mit der Augenzahl "
+"3.<br/><i>Vierer</i>: Würfel mit der Augenzahl 4.<br/><i>Fünfer</i>: Würfel "
+"mit der Augenzahl 5.<br/><i>Sechser</i>: Würfel mit der Augenzahl 6.<br/"
+"><i>Bonus</i>: Wenn die Summe der bisherigen Punkte mindestens 63 erreicht, "
+"bekommt der Spieler einen Bonus von 50 Punkten (Yatzy) oder 35 Punkten "
+"(Kniffel).<br/><i>Ein Paar (nur Yatzy)</i>: Zwei Würfel mit der selben Zahl "
+"(das höchste Paar).<br/><i>Zwei Paare (nur Yatzy)</i>: Zwei Würfelpaare mit "
+"der jeweils selben Zahl.<br/><i>Drei Gleiche</i>: Drei Würfel mit der selben "
+"Zahl. In Yatzy werden die Augen der gleichen Würfel zusammengezählt, in "
+"Kniffel alle Augen.<br/><i>Vier Gleiche</i>: Vier Würfel mit der selben "
+"Zahl. In Yatzy werden die Augen der gleichen Würfel zusammengezählt, in "
+"Kniffel alle Augen.<br/><i>Kleine Straße</i>: Eine Reihe von 1 bis 5 -> 15 "
+"Punkte (Yatzy), beliebige Viererreihe -> 30 Punkte (Kniffel).<br/><i>Große "
+"Straße</i>: Eine Reihe von 2 bis 6 -> 20 Punkte (Yatzy), beliebige "
+"Fünferreihe -> 40 Punkte (Kniffel).<br/><i>Volles Haus</i>: Eine Paar und "
+"drei Gleiche zusammengezählt (Yatzy), -> 25 Punkte (Kniffel).<br/><i>Yatzy</"
+"i>: Alle fünf Würfel haben die gleiche Zahl (50 Punkte wert).<br/><i>Chance</"
+"i>: Die Summe aller Würfel.<br/><br/>In jeder Runde muss eine Konstellation "
+"ausgewählt und eingetragen werden. Wenn die Würfel in keine Konstellation "
+"passen muss eine 0 eingetragen werden.<br/><br/>Viel Spaß!<br/>"
 
 #. TRANSLATORS: Title of page showing high scores
-#: ../qml/Main.qml:824
+#: ../qml/Main.qml:823
 msgid "High Scores"
 msgstr "Bestenliste"
+
+#. TRANSLATORS: Title of the About page
+#: ../qml/About.qml:8
+msgid "About"
+msgstr "Über"
+
+#: ../qml/About.qml:12
+msgid "Back"
+msgstr "Zurück"
+
+#: ../qml/About.qml:46
+msgid "Version %1"
+msgstr "Version %1"
+
+#: ../qml/About.qml:70
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Veröffentlich unter den Bestimmungen von GNU GPL v3"
+
+#: ../qml/About.qml:81
+msgid ""
+"Source code available on <a style=\"text-decoration: none;\" href=\"https://"
+"github.com/mymike00/Yatzy\">GitHub.com</a>"
+msgstr ""
+"Quellcode verfügbar unter <a style=\"text-decoration: none;\" href=\"https://"
+"github.com/mymike00/Yatzy\">GitHub.com</a>"
+
+#~ msgid ""
+#~ "<i>Yatzy</i> is a game where you roll five dice and try and make sets "
+#~ "that score points. The goal is to get the highest score.<br/><br/>The "
+#~ "game is made up of 15 turns. A turn starts by rolling all five dice. You "
+#~ "can re-roll some or all of the dice up to twice. Select dice to stop them "
+#~ "from being re-rolled.<br/><br/>Points are scored by summing the dice that "
+#~ "make each set. The following sets are possible.<br/><i>Ones</i>: Dice "
+#~ "showing the number 1.<br/><i>Twos</i>: Dice showing the number 2.<br/"
+#~ "><i>Threes</i>: Dice showing the number 3.<br/><i>Fours</i>: Dice showing "
+#~ "the number 4.<br/><i>Fives</i>: Dice showing the number 5.<br/><i>Sixes</"
+#~ "i>: Dice showing the number 6.<br/><i>Bonus</i>: If the above sets score "
+#~ "at least 63 points (an average of three dice in each set) then a bonus of "
+#~ "50 points is given.<br/><i>One Pair</i>: Two dice showing the same number "
+#~ "(largest pair used).<br/><i>Two Pairs</i>: Two pairs of dice.<br/"
+#~ "><i>Three of a Kind</i>: Three dice showing the same number.<br/><i>Four "
+#~ "of a Kind</i>: Four dice showing the same number.<br/><i>Small Straight</"
+#~ "i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long Straight</i>: 2, 3, 4, 5, 6 "
+#~ "in any order.<br/><i>House</i>: A pair and a three of a kind.<br/"
+#~ "><i>Yatzy</i>: All five dice showing the same number (worth 50 points)."
+#~ "<br/><i>Chance</i>: All dice used for scoring.<br/><br/>You must choose a "
+#~ "set for each turn. If the dice do not match the chosen set rules then "
+#~ "zero is scored for that set.<br/><br/>Have fun!<br/>"
+#~ msgstr ""
+#~ "<i>Yatzy</i> ist ein Würfelspiel mit fünf Würfel welches sich über 15 "
+#~ "Runden zieht, bei dem es nicht nur aufs Würfelglück ankommt sondern gilt "
+#~ "es die Augenzahlen möglichst günstig zu platzieren. Das Ziel ist es eine "
+#~ "möglichst hohe Punktezahl zu erreichen. <br/><br/>Eine Runde beginnt mit "
+#~ "dem werfen von fünf Würfeln. Es können alle oder nur einzelne Würfel "
+#~ "erneut geworfen werden. Ein ausgewählter Würfel wird nicht erneut "
+#~ "geworfen.<br/><br/>Die Punkte werden von jedem Würfel zusammengezählt je "
+#~ "nach ausgewählter Konstellation. Folgende Konstellationen sind möglich."
+#~ "<br/><i>Einser</i>: Würfel mit der Augenzahl 1.<br/><i>Zweier</i>: Würfel "
+#~ "mit der Augenzahl 2.<br/><i>Dreier</i>: Würfel mit der Augenzahl 3.<br/"
+#~ "><i>Vierer</i>: Würfel mit der Augenzahl 4.<br/><i>Fünfer</i>: Würfel mit "
+#~ "der Augenzahl 5.<br/><i>Sechser</i>: Würfel mit der Augenzahl 6.<br/"
+#~ "><i>Bonus</i>: Wenn die Summe der bisherigen Punkte mindestens 63 "
+#~ "erreicht, bekommt der Spieler einen Bonus von 50 Punkten.<br/><i>Ein "
+#~ "Paar</i>: Zwei Würfel mit der selben Zahl (das höchste Paar).<br/><i>Zwei "
+#~ "Paare</i>: Zwei Würfelpaare mit der jeweils selben Zahl.<br/><i>Drei "
+#~ "Gleiche</i>: Drei Würfel mit der selben Zahl.<br/><i>Vier Gleiche</i>: "
+#~ "Vier Würfel mit der selben Zahl.<br/><i>Kleine Straße</i>: Eine Reihe von "
+#~ "1,2,3,4 und 5.<br/><i>Große Straße</i>: Eine Reihe von 2,3,4,5 und 6.<br/"
+#~ "><i>Volles Haus</i>: Eine Paar und drei Gleiche.<br/><i>Yatzy</i>: Alle "
+#~ "fünf Würfel haben die gleiche Zahl (50 Punkte wert).<br/><i>Chance</i>: "
+#~ "Die Summe aller Würfel.<br/><br/>In jeder Runde muss eine Konstellation "
+#~ "ausgewählt und eingetragen werden. Wenn die Würfel in keine Konstellation "
+#~ "passen muss eine 0 eingetragen werden.<br/><br/>Viel Spaß!<br/>"
 
 #~ msgid "Restart game"
 #~ msgstr "Spiel neu starten"
