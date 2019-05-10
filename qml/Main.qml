@@ -792,7 +792,7 @@ MainView {
                     wrapMode: Text.Wrap
                     textFormat: Text.StyledText
                     // TRANSLATORS: Yatzy game instructions
-                    text: i18n.tr ("<i>Yatzy</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.") +"<br/><br/>"+
+                    text: "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.") +"<br/><br/>"+
                     i18n.tr("The game is made up of <b>15</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.") +"<br/><br/>"+
                     i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
                     "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
@@ -806,8 +806,8 @@ MainView {
                     "<i>"+i18n.tr("Two Pairs")+"</i>: "+i18n.tr("Two pairs of dice.")+"<br/>"+
                     "<i>"+i18n.tr("Three of a Kind")+"</i>: "+i18n.tr("Three dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
                     "<i>"+i18n.tr("Four of a Kind")+"</i>: "+i18n.tr("Four dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
-                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("1 to 5 in any order -><b>15</b> points.")+"<br/>"+
-                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("2 to 6 in any order -><b>20</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("1 to 5 in any order -> <b>15</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("2 to 6 in any order -> <b>20</b> points.")+"<br/>"+
                     "<i>"+i18n.tr("House")+"</i>: "+i18n.tr("A pair and a three of a kind <b>sum up</b>.")+"<br/>"+
                     "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("All five dice showing the same number (worth 50 points).")+"<br/>"+
                     "<i>"+i18n.tr("Chance")+"</i>: "+i18n.tr("All dice used for scoring.")+"<br/><br/>"+
@@ -821,8 +821,7 @@ MainView {
                     wrapMode: Text.Wrap
                     textFormat: Text.StyledText
                     // TRANSLATORS: Kniffel instructions
-                    text:
-                    "<i>"+i18n.tr("Kniffel")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.")+"<br/><br/>"+
+                    text: "<i>"+i18n.tr("Kniffel")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.")+"<br/><br/>"+
                     i18n.tr("The game is made up of <b>13</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.")+"<br/><br/>"+
                     i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
                     "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
