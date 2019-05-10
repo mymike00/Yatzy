@@ -19,7 +19,8 @@ MainView {
     height: units.gu(75)
 
     property bool mode: false
-    // change_mode says if the confirm_new_game_dialog is used to restart a game (true) or when you change mode (false)
+    // mode : true -> kniffel
+    // mode : false -> yatzy
     property bool r: true
 
     Component {
@@ -767,6 +768,11 @@ MainView {
                         onTriggered: page_stack.push(Qt.resolvedUrl("About.qml"))
                     }
                 ]
+                extension: Sections {
+                    id: mode_sections
+                    model: [i18n.tr("Yatzy"), i18n.tr("Kniffel")]
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
             }
             Flickable {
                 anchors {
@@ -776,40 +782,65 @@ MainView {
                     margins: units.gu (2)
                     top: about_header.bottom
                 }
-                contentHeight: how_to_play_label.height
+                contentHeight: Math.max(how_to_play_label_yatzy.height,how_to_play_label_kniffel.height)
                 flickableDirection: Flickable.VerticalFlick
 
                 Label {
-                    id: how_to_play_label
+                    id: how_to_play_label_yatzy
+                    visible: mode_sections.selectedIndex == 0
                     width: parent.width
                     wrapMode: Text.Wrap
                     textFormat: Text.StyledText
-                    // TRANSLATORS: Game instructions
-                    text: i18n.tr ("<i>Yatzy/Kniffel</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.<br/>\
-<br/>\
-The game is made up of 15 turns in Yatzy or 13 turns in Kniffel. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.<br/>\
-<br/>\
-Points are scored by summing the dice that make each set. The following sets are possible.<br/>\
-<i>Ones</i>: Dice showing the number 1.<br/>\
-<i>Twos</i>: Dice showing the number 2.<br/>\
-<i>Threes</i>: Dice showing the number 3.<br/>\
-<i>Fours</i>: Dice showing the number 4.<br/>\
-<i>Fives</i>: Dice showing the number 5.<br/>\
-<i>Sixes</i>: Dice showing the number 6.<br/>\
-<i>Bonus</i>: If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points (Yatzy) or 35 points (Kniffel) is given.<br/>\
-<i>One Pair (Yatzy only)</i>: Two dice showing the same number (largest pair used).<br/>\
-<i>Two Pairs (Yatzy only)</i>: Two pairs of dice.<br/>\
-<i>Three of a Kind</i>: Three dice showing the same number. In Yatzy the eyes of equal dice are sum up, in Kniffel all eyes.<br/>\
-<i>Four of a Kind</i>: Four dice showing the same number. In Yatzy the eyes of equal dice are sum up, in Kniffel all eyes.<br/>\
-<i>Small Straight</i>: 1 to 5 in any order -> 15 points (Yatzy), row of four in any order -> 30 points (Kniffel).<br/>\
-<i>Long Straight</i>: 2 to 6 in any order -> 20 points (Yatzy), row of five in any order -> 40 points (Kniffel).<br/>\
-<i>House</i>: A pair and a three of a kind sum up (Yatzy), -> 25 points (Kniffel).<br/>\
-<i>Yatzy</i>: All five dice showing the same number (worth 50 points).<br/>\
-<i>Chance</i>: All dice used for scoring.<br/>\
-<br/>\
-You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.<br/>\
-<br/>\
-Have fun!<br/>")
+                    // TRANSLATORS: Yatzy game instructions
+                    text: i18n.tr ("<i>Yatzy</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.") +"<br/><br/>"+
+                    i18n.tr("The game is made up of <b>15</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.") +"<br/><br/>"+
+                    i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
+                    "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
+                    "<i>"+i18n.tr("Twos")+"</i>: "+i18n.tr("Dice showing the number 2.")+"<br/>"+
+                    "<i>"+i18n.tr("Threes")+"</i>: "+i18n.tr("Dice showing the number 3.")+"<br/>"+
+                    "<i>"+i18n.tr("Fours")+"</i>: "+i18n.tr("Dice showing the number 4.")+"<br/>"+
+                    "<i>"+i18n.tr("Fives")+"</i>: "+i18n.tr("Dice showing the number 5.")+"<br/>"+
+                    "<i>"+i18n.tr("Sixes")+"</i>: "+i18n.tr("Dice showing the number 6.")+"<br/>"+
+                    "<i>"+i18n.tr("Bonus")+"</i>: "+i18n.tr("If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points is given.")+"<br/>"+
+                    "<i>"+i18n.tr("One Pair")+"</i>: "+i18n.tr("Two dice showing the same number (largest pair used).")+"<br/>"+
+                    "<i>"+i18n.tr("Two Pairs")+"</i>: "+i18n.tr("Two pairs of dice.")+"<br/>"+
+                    "<i>"+i18n.tr("Three of a Kind")+"</i>: "+i18n.tr("Three dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Four of a Kind")+"</i>: "+i18n.tr("Four dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("1 to 5 in any order -><b>15</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("2 to 6 in any order -><b>20</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("House")+"</i>: "+i18n.tr("A pair and a three of a kind <b>sum up</b>.")+"<br/>"+
+                    "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("All five dice showing the same number (worth 50 points).")+"<br/>"+
+                    "<i>"+i18n.tr("Chance")+"</i>: "+i18n.tr("All dice used for scoring.")+"<br/><br/>"+
+                    i18n.tr("You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.")+"<br/><br/>"+
+                    i18n.tr("Have fun!")+"<br/>"
+                }
+                Label {
+                    id: how_to_play_label_kniffel
+                    visible: mode_sections.selectedIndex == 1
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    textFormat: Text.StyledText
+                    // TRANSLATORS: Kniffel instructions
+                    text:
+                    "<i>"+i18n.tr("Kniffel")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.")+"<br/><br/>"+
+                    i18n.tr("The game is made up of <b>13</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.")+"<br/><br/>"+
+                    i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
+                    "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
+                    "<i>"+i18n.tr("Twos")+"</i>: "+i18n.tr("Dice showing the number 2.")+"<br/>"+
+                    "<i>"+i18n.tr("Threes")+"</i>: "+i18n.tr("Dice showing the number 3.")+"<br/>"+
+                    "<i>"+i18n.tr("Fours")+"</i>: "+i18n.tr("Dice showing the number 4.")+"<br/>"+
+                    "<i>"+i18n.tr("Fives")+"</i>: "+i18n.tr("Dice showing the number 5.")+"<br/>"+
+                    "<i>"+i18n.tr("Sixes")+"</i>: "+i18n.tr("Dice showing the number 6.")+"<br/>"+
+                    "<i>"+i18n.tr("Bonus")+"</i>: "+i18n.tr("If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 35 points is given.")+"<br/>"+
+                    "<i>"+i18n.tr("Three of a Kind")+"</i>: "+i18n.tr("Three dice showing the same number. The eyes of <b>all</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Four of a Kind")+"</i>: "+i18n.tr("Four dice showing the same number. The eyes of <b>all</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("Row of four in any order -> <b>30</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("Row of five in any order -> <b>40</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("House")+"</i>: "+i18n.tr("A pair and a three of a kind -> <b>25</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("All five dice showing the same number (worth 50 points).")+"<br/>"+
+                    "<i>"+i18n.tr("Chance")+"</i>: "+i18n.tr("All dice used for scoring.")+"<br/><br/>"+
+                    i18n.tr("You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.")+"<br/><br/>"+
+                    i18n.tr("Have fun!")+"<br/>"
                 }
             }
         }
@@ -827,6 +858,15 @@ Have fun!<br/>")
                         onTriggered: PopupUtils.open (confirm_clear_scores_dialog)
                     }
                 ]
+                extension: Sections {
+                    model: [i18n.tr("Yatzy"), i18n.tr("Kniffel")]
+                    selectedIndex: mode ? 1 : 0
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    onSelectedIndexChanged: {
+                        mode = selectedIndex==1
+                        main_page.update_scores ()
+                    }
+                }
             }
 
             GridLayout {
