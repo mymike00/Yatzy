@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-22 16:36+0000\n"
-"PO-Revision-Date: 2018-02-23 00:20+0200\n"
+"POT-Creation-Date: 2019-05-11 20:37+0000\n"
+"PO-Revision-Date: 2019-05-12 12:25+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
 "Language: es\n"
@@ -18,278 +18,398 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. TRANSLATORS: Title of the About page
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:8
+#: ../qml/About.qml:8
 msgid "About"
 msgstr "Acerca de"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:12
+#: ../qml/About.qml:12
 msgid "Back"
 msgstr "Atrás"
 
 #. TRANSLATORS: app name
-#. TRANSLATORS: Title of application
 #. TRANSLATORS: Label beside Yatzy score (all dice same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:40
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:139
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:680
+#. TRANSLATORS: Yatzy game instructions
+#: ../qml/About.qml:40 ../qml/Main.qml:148 ../qml/Main.qml:734
+#: ../qml/Main.qml:773 ../qml/Main.qml:795 ../qml/Main.qml:812
+#: ../qml/Main.qml:839 ../qml/Main.qml:861 yatzy.desktop.in.h:1
 msgid "Yatzy"
 msgstr "Yatzy"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:46
-msgid "Version "
-msgstr "Versión "
+#: ../qml/About.qml:46
+msgid "Version %1"
+msgstr "Versión %1"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:70
+#: ../qml/About.qml:70
 msgid "Released under the terms of the GNU GPL v3"
 msgstr "Publicado bajo los términos de la GNU GPL v3"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:81
-msgid ""
-"Source code available on <a style=\"text-decoration: none;\" href=\"https://"
-"github.com/mymike00/Yatzy\">GitHub.com</a>"
-msgstr ""
-"Código fuente disponible en <a style=\"text-decoration: none;\" href=\"https://"
-"github.com/mymike00/Yatzy\">GitHub.com</a>"
+#: ../qml/About.qml:81
+msgid "Source code available on"
+msgstr "Código fuente disponible en"
 
 #. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:26
+#: ../qml/Main.qml:31
 msgid "Game in progress"
 msgstr "Juego en marcha"
 
+#. TRANSLATORS: Title for dialog shown when switching to another game mode while a game is in progress
+#: ../qml/Main.qml:33
+msgid "Change game mode"
+msgstr "Cambiar modo de juego"
+
 #. TRANSLATORS: Content for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:28
+#: ../qml/Main.qml:36
 msgid "Are you sure you want to restart this game?"
 msgstr "¿Seguro que quiere reiniciar esta partida?"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:55
+#: ../qml/Main.qml:62
 msgid "Start a<br/>new game"
 msgstr "Iniciar una<br/>nueva partida"
 
+#: ../qml/Main.qml:62
+msgid "Change mode<br/>and reset"
+msgstr "Cambiar modo<br/>y reiniciar"
+
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:90
+#: ../qml/Main.qml:99
 msgid "Continue<br/>current game"
 msgstr "Continuar<br/>la partida actual"
 
 #. TRANSLATORS: Title for dialog confirming if scores should be cleared
 #. TRANSLATORS: Button in clear scores dialog that clears scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:109
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:114
+#: ../qml/Main.qml:118 ../qml/Main.qml:123
 msgid "Clear scores"
 msgstr "Limpiar marcadores"
 
 #. TRANSLATORS: Content for dialog confirming if scores should be cleared
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:111
+#: ../qml/Main.qml:120
 msgid "Existing scores will be deleted. This cannot be undone."
-msgstr "Al salir se perderán los marcadores. No hay marcha atrás"
+msgstr "Al salir se perderán los marcadores. No hay marcha atrás."
 
 #. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:123
+#: ../qml/Main.qml:132
 msgid "Keep existing scores"
 msgstr "Mantener los marcadores"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:143
-#, fuzzy
+#. TRANSLATORS: Title of application
+#. TRANSLATORS: Kniffel instructions
+#: ../qml/Main.qml:148 ../qml/Main.qml:773 ../qml/Main.qml:824
+#: ../qml/Main.qml:861
+msgid "Kniffel"
+msgstr "Kniffel"
+
+#: ../qml/Main.qml:153
 msgid "How to play"
 msgstr "Cómo jugar"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:147
-#, fuzzy
+#: ../qml/Main.qml:157
 msgid "High scores"
 msgstr "Mayores puntuaciones"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:155
+#: ../qml/Main.qml:165
 msgid "Reload"
 msgstr "Recargar"
 
+#: ../qml/Main.qml:177
+msgid "Mode"
+msgstr "Modo"
+
 #. TRANSLATORS: Label shown below high score for a score just achieved
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:247
+#: ../qml/Main.qml:273
 msgid "Now"
 msgstr "Ahora"
 
 #. TRANSLATORS: Label shown below high score for a score achieved seconds ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:252
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:278
 msgid "%n second ago"
 msgid_plural "%n seconds ago"
 msgstr[0] "hace %n segundo"
 msgstr[1] "hace %n segundos"
 
 #. TRANSLATORS: Label shown below high score for a score achieved minutes ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:258
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:284
 msgid "%n minute ago"
 msgid_plural "%n minutes ago"
 msgstr[0] "hace %n minuto"
 msgstr[1] "hace %n minutos"
 
 #. TRANSLATORS: Label shown below high score for a score achieved hours ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:264
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:290
 msgid "%n hour ago"
 msgid_plural "%n hours ago"
 msgstr[0] "hace %n hora"
 msgstr[1] "hace %n horas"
 
 #. TRANSLATORS: Label shown below high score for a score achieved days ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:270
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:296
 msgid "%n day ago"
 msgid_plural "%n days ago"
 msgstr[0] "Hace %n día"
 msgstr[1] "hace %n días"
 
 #. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:482
+#: ../qml/Main.qml:524
 msgid "New Game"
 msgstr "Nueva partida"
 
 #. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:484
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:526
 msgid "Roll (%n)"
 msgstr "Tirada (%n)"
 
 #. TRANSLATORS: Label beside ones score (sum of dice showing 1)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:536
+#: ../qml/Main.qml:578 ../qml/Main.qml:798 ../qml/Main.qml:827
 msgid "Ones"
 msgstr "Unos"
 
 #. TRANSLATORS: Label beside twos score (sum of dice showing 2)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:545
+#: ../qml/Main.qml:587 ../qml/Main.qml:799 ../qml/Main.qml:828
 msgid "Twos"
 msgstr "Doses"
 
 #. TRANSLATORS: Label beside threes score (sum of dice showing 3)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:554
+#: ../qml/Main.qml:596 ../qml/Main.qml:800 ../qml/Main.qml:829
 msgid "Threes"
 msgstr "Treses"
 
 #. TRANSLATORS: Label beside fours score (sum of dice showing 4)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:563
+#: ../qml/Main.qml:605 ../qml/Main.qml:801 ../qml/Main.qml:830
 msgid "Fours"
 msgstr "Cuatros"
 
 #. TRANSLATORS: Label beside fives score (sum of dice showing 5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:572
+#: ../qml/Main.qml:614 ../qml/Main.qml:802 ../qml/Main.qml:831
 msgid "Fives"
 msgstr "Cincos"
 
 #. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:581
+#: ../qml/Main.qml:623 ../qml/Main.qml:803 ../qml/Main.qml:832
 msgid "Sixes"
 msgstr "Seises"
 
 #. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:590
+#: ../qml/Main.qml:632 ../qml/Main.qml:804 ../qml/Main.qml:833
 msgid "Bonus"
-msgstr "Bono"
+msgstr "Bonificación"
 
 #. TRANSLATORS: Label beside chance score (sum of all dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:599
+#: ../qml/Main.qml:649 ../qml/Main.qml:813 ../qml/Main.qml:840
 msgid "Chance"
 msgstr "Suerte"
 
-#. TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:617
+#: ../qml/Main.qml:668 ../qml/Main.qml:805
 msgid "One Pair"
 msgstr "Una pareja"
 
-#. TRANSLATORS: Label beside two pair score (sum of two pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:626
+#: ../qml/Main.qml:679
 msgid "Two Pair"
 msgstr "Dos parejas"
 
 #. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:635
+#: ../qml/Main.qml:689 ../qml/Main.qml:807 ../qml/Main.qml:834
 msgid "Three of a Kind"
 msgstr "Tres iguales"
 
 #. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:644
+#: ../qml/Main.qml:698 ../qml/Main.qml:808 ../qml/Main.qml:835
 msgid "Four of a Kind"
 msgstr "Cuatro iguales"
 
 #. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:653
+#: ../qml/Main.qml:707 ../qml/Main.qml:809 ../qml/Main.qml:836
 msgid "Small Straight"
 msgstr "Escalera pequeña"
 
 #. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:662
+#: ../qml/Main.qml:716
 msgid "Large Straight"
 msgstr "Escalera grande"
 
 #. TRANSLATORS: Label beside house score (three pair + two pair)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:671
+#: ../qml/Main.qml:725 ../qml/Main.qml:811 ../qml/Main.qml:838
 msgid "House"
 msgstr "Casa"
 
 #. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:698
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:752
 msgid "Total: <b>%n</b>"
 msgstr "Total: <b>%n</b>"
 
 #. TRANSLATORS: Title of page with game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:708
+#: ../qml/Main.qml:762
 msgid "How to Play"
 msgstr "Cómo jugar"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:713
+#: ../qml/Main.qml:767
 msgid "Info"
 msgstr "Información"
 
-#. TRANSLATORS: Game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:735
+#: ../qml/Main.qml:795 ../qml/Main.qml:824
 msgid ""
-"<i>Yatzy</i> is a game where you roll five dice and try and make sets that "
-"score points. The goal is to get the highest score.<br/><br/>The game is "
-"made up of 15 turns. A turn starts by rolling all five dice. You can re-roll "
-"some or all of the dice up to twice. Select dice to stop them from being re-"
-"rolled.<br/><br/>Points are scored by summing the dice that make each set. "
-"The following sets are possible.<br/><i>Ones</i>: Dice showing the number 1."
-"<br/><i>Twos</i>: Dice showing the number 2.<br/><i>Threes</i>: Dice showing "
-"the number 3.<br/><i>Fours</i>: Dice showing the number 4.<br/><i>Fives</i>: "
-"Dice showing the number 5.<br/><i>Sixes</i>: Dice showing the number 6.<br/"
-"><i>Bonus</i>: If the above sets score at least 63 points (an average of "
-"three dice in each set) then a bonus of 50 points is given.<br/><i>One Pair</"
-"i>: Two dice showing the same number (largest pair used).<br/><i>Two Pairs</"
-"i>: Two pairs of dice.<br/><i>Three of a Kind</i>: Three dice showing the "
-"same number.<br/><i>Four of a Kind</i>: Four dice showing the same number."
-"<br/><i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long "
-"Straight</i>: 2, 3, 4, 5, 6 in any order.<br/><i>House</i>: A pair and a "
-"three of a kind.<br/><i>Yatzy</i>: All five dice showing the same number "
-"(worth 50 points).<br/><i>Chance</i>: All dice used for scoring.<br/><br/"
-">You must choose a set for each turn. If the dice do not match the chosen "
-"set rules then zero is scored for that set.<br/><br/>Have fun!<br/>"
+"is a game where you roll five dice and try and make sets that score points. "
+"The goal is to get the highest score."
 msgstr ""
-"<I> Yatzy </ i> es un juego en el que se tiran cinco dados y se intenta "
-"hacer conjuntos que anoten puntos. El objetivo es obtener la puntuación más "
-"alta. <br/> <br/> El juego se compone de 15 rondas o turnos. Un turno "
-"comienza tirando los cinco dados. Puede volver a tirar todos o algunos de "
-"los dados hasta dos veces. Seleccione los dados para evitar que se vuelvan a "
-"tirar. <br/> <br/> Los puntos se anotan sumando los conjuntos que generan "
-"los dados. Son posibles los siguientes conjuntos: <br/> <i> Unos </ i>: "
-"Caras que muestran el número 1. <br/> <i> Doses </ i>: Caras que muestran el "
-"número 2. <br/> <i > Treses </ i>: Caras que muestran el número 3. <br/> <i> "
-"Cuatros </ i>: Caras que muestran el número 4. <br/> <i> Cincos </ i>: Caras "
-"que muestran el número 5 . <br/> <i> Seises </ i>: Caras que muestren el "
-"número 6. <br/> <i> Bono </ i>: Si los conjuntos anteriores anotan al menos "
-"63 puntos (un promedio de tres dados en cada uno) <br/> <i> Un par </ i>: "
-"Dos dados que muestran el mismo número (mayor par utilizado). <br/> <i> Dos "
-"pares </ i>: Dos pares de dados. <br/> <i> Tres de una clase </ i>: Tres "
-"dados que muestran el mismo número. <br/> <i> Cuatro de una clase </ i>: "
-"Cuatro dados que muestran el mismo número </ i> <i> Escalera pequeña </ ​​i>: "
-"1, 2, 3, 4, 5 en cualquier orden. <br/> <i> Escalera grande </ i>: 2, ​​3, 4, "
-"5 , 6 en cualquier orden. <br/> <i> Casa </ i>: Un par y tres de una clase. "
-"<br/> <i> Yatzy </ i>: Los cinco dados muestran el mismo número <br/> <i> "
-"Suerte </ i>: Todos los dados se usan para anotar. <br/> <br/> Debe elegir "
-"un conjunto para cada turno Si los dados no coinciden con las reglas de "
-"juego elegidas entonces se anota cero para ese conjunto. <br/> <br/> "
-"¡Diviértete! <br/>"
+"es un juego en el que tira cinco dados y trata de hacer series que consiguen "
+"puntos. El objetivo es conseguir la puntuación más alta."
+
+#: ../qml/Main.qml:796
+msgid ""
+"The game is made up of <b>15</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"El juego consta de <b>15</b> turnos. Un turno comienza al tirar los cinco "
+"dados. Puede volver a tirar alguno o todos los dados hasta dos veces. "
+"Seleccione los dados que no quiere volver a tirar."
+
+#: ../qml/Main.qml:797 ../qml/Main.qml:826
+msgid ""
+"Points are scored by summing the dice that make each set. The following sets "
+"are possible."
+msgstr ""
+"Los puntos se consiguen sumando los dados que forman cada serie. Son posibles "
+"las siguientes series."
+
+#: ../qml/Main.qml:798 ../qml/Main.qml:827
+msgid "Dice showing the number 1."
+msgstr "Dados mostrando el número 1."
+
+#: ../qml/Main.qml:799 ../qml/Main.qml:828
+msgid "Dice showing the number 2."
+msgstr "Dados mostrando el número 2."
+
+#: ../qml/Main.qml:800 ../qml/Main.qml:829
+msgid "Dice showing the number 3."
+msgstr "Dados mostrando el número 3."
+
+#: ../qml/Main.qml:801 ../qml/Main.qml:830
+msgid "Dice showing the number 4."
+msgstr "Dados mostrando el número 4."
+
+#: ../qml/Main.qml:802 ../qml/Main.qml:831
+msgid "Dice showing the number 5."
+msgstr "Dados mostrando el número 5."
+
+#: ../qml/Main.qml:803 ../qml/Main.qml:832
+msgid "Dice showing the number 6."
+msgstr "Dados mostrando el número 6."
+
+#: ../qml/Main.qml:804
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 50 points is given."
+msgstr ""
+"Si las series anteriores consiguen al menos 63 puntos (una media de tres "
+"dados en cada una de ellas) entonces se obtiene una bonificación de 50 puntos."
+
+#: ../qml/Main.qml:805
+msgid "Two dice showing the same number (largest pair used)."
+msgstr "Dos dados con el mismo número (utilizado el par más grande)."
+
+#: ../qml/Main.qml:806
+msgid "Two Pairs"
+msgstr "Dos parejas"
+
+#: ../qml/Main.qml:806
+msgid "Two pairs of dice."
+msgstr "Dos pares de dados."
+
+#: ../qml/Main.qml:807
+msgid ""
+"Three dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Tres dados mostrando el mismo número. Se suman los puntos de los dados "
+"<b>iguales</b>."
+
+#: ../qml/Main.qml:808
+msgid ""
+"Four dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Cuatro dados mostrando el mismo número. Se suman los puntos de los dados "
+"<b>iguales</b>."
+
+#: ../qml/Main.qml:809
+msgid "1 to 5 in any order -> <b>15</b> points."
+msgstr "1 a 5 en cualquier orden -> <b>15</b> puntos."
+
+#: ../qml/Main.qml:810 ../qml/Main.qml:837
+msgid "Long Straight"
+msgstr "Escalera grande"
+
+#: ../qml/Main.qml:810
+msgid "2 to 6 in any order -> <b>20</b> points."
+msgstr "2 a 6 en cualquier orden -> <b>20</b> puntos."
+
+#: ../qml/Main.qml:811
+msgid "A pair and a three of a kind <b>sum up</b>."
+msgstr "Un par y un tres de la misma clase <b>se suman</b>."
+
+#: ../qml/Main.qml:812 ../qml/Main.qml:839
+msgid "All five dice showing the same number (worth 50 points)."
+msgstr "Todos los dados mostrando el mismo número (vale 50 puntos)"
+
+#: ../qml/Main.qml:813 ../qml/Main.qml:840
+msgid "All dice used for scoring."
+msgstr "Todos los dados usados para puntuar."
+
+#: ../qml/Main.qml:814 ../qml/Main.qml:841
+msgid ""
+"You must choose a set for each turn. If the dice do not match the chosen set "
+"rules then zero is scored for that set."
+msgstr ""
+"Debe elegir un conjunto para cada turno. Si los dados no coinciden con las "
+"reglas del juego elegido entonces se anota cero en ese juego."
+
+#: ../qml/Main.qml:815 ../qml/Main.qml:842
+msgid "Have fun!"
+msgstr "¡Diviértase!"
+
+#: ../qml/Main.qml:825
+msgid ""
+"The game is made up of <b>13</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"El juego consta de <b>13</b> turnos. Un turno comienza al tirar todos los "
+"cincos dados. Puede volver a tirar alguno o todos los dados hasta dos veces. "
+"Seleccione los dados que no quiere volver a tirar."
+
+#: ../qml/Main.qml:833
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 35 points is given."
+msgstr ""
+"Si los conjuntos anteriores puntúan al menos 63 puntos (una media de tres "
+"dados en cada conjunto) entonces se consigue una bonificación de 35 puntos."
+
+#: ../qml/Main.qml:834
+msgid ""
+"Three dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Tres dados mostrando el mismo número. Se suman los puntos de <b>todos</b> los "
+"dados."
+
+#: ../qml/Main.qml:835
+msgid ""
+"Four dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Cuatro dados mostrando el mismo número. Se suman los puntos de <b>todos</b> "
+"los dados."
+
+#: ../qml/Main.qml:836
+msgid "Row of four in any order -> <b>30</b> points."
+msgstr "Fila de cuatro en cualquier orden -> <b>30</b> puntos."
+
+#: ../qml/Main.qml:837
+msgid "Row of five in any order -> <b>40</b> points."
+msgstr "Fila de cinco en cualquier orden -> <b>40</b> puntos."
+
+#: ../qml/Main.qml:838
+msgid "A pair and a three of a kind -> <b>25</b> points."
+msgstr "Un par y un tres de la misma clase -> <b>25</b> puntos."
 
 #. TRANSLATORS: Title of page showing high scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:770
+#: ../qml/Main.qml:853
 msgid "High Scores"
-msgstr "Mayores puntuaciones"
+msgstr "Puntuaciones más altas"
