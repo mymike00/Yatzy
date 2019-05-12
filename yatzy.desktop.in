@@ -1,0 +1,9 @@
+[Desktop Entry]
+_Name=Yatzy
+Exec=qmlscene qml/Main.qml
+Icon=assets/Yatzy.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-Splash-Color=#006268
+X-Ubuntu-Splash-Image=assets/Yatzy.svg

@@ -5,11 +5,11 @@
     "title": "Yatzy",
     "hooks": {
         "Yatzy": {
-            "apparmor": "Yatzy/Yatzy.apparmor",
-            "desktop": "Yatzy/Yatzy.desktop"
+            "apparmor": "yatzy.apparmor",
+            "desktop": "yatzy.desktop"
         }
     },
-    "version": "0.2",
+    "version": "0.3",
     "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "ubuntu-sdk-16.04"
 }

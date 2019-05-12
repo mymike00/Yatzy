@@ -43,7 +43,7 @@ Page {
                 }
 
                 Text {
-                    text: i18n.tr("Version ") + "0.2"
+                    text: i18n.tr("Version %1").arg("0.3")
                     anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
@@ -52,7 +52,7 @@ Page {
                 id: logo
                 width: units.gu(17)
                 source: Image {
-                    source: "Yatzy.svg"
+                    source: "../assets/Yatzy.svg"
                 }
                 anchors.horizontalCenter: parent.horizontalCenter
             }
@@ -78,7 +78,7 @@ Page {
 
                 Text {
                     font.underline: false
-                    text: i18n.tr("Source code available on <a style=\"text-decoration: none;\" href=\"https://github.com/mymike00/Yatzy\">GitHub.com</a>")
+                    text: i18n.tr("Source code available on")+" <a style=\"text-decoration: none;\" href=\"https://github.com/mymike00/Yatzy\">GitHub.com</a>"
                     font.pointSize: units.gu(1)
 
                     anchors.horizontalCenter: parent.horizontalCenter

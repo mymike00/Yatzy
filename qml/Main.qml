@@ -18,18 +18,25 @@ MainView {
     width: units.gu(40)
     height: units.gu(75)
 
+    property bool mode: false
+    // mode : true -> kniffel
+    // mode : false -> yatzy
+    property bool r: true
+
     Component {
         id: confirm_new_game_dialog
         Dialog {
             id: d
             // TRANSLATORS: Title for dialog shown when starting a new game while one in progress
-            title: i18n.tr ("Game in progress")
+            title: r ? i18n.tr ("Game in progress")
+            // TRANSLATORS: Title for dialog shown when switching to another game mode while a game is in progress
+            : i18n.tr ("Change game mode")
+
             // TRANSLATORS: Content for dialog shown when starting a new game while one in progress
             text: i18n.tr ("Are you sure you want to restart this game?")
             Row {
                 spacing: units.gu(1)
                 width: d.width
-                Component.onCompleted: console.log(width)
 
                 Button {
                     id: restartButton
@@ -44,7 +51,7 @@ MainView {
 
                         Icon {
                             anchors.horizontalCenter: parent.horizontalCenter
-                            name: "reset"
+                            name: r ? "reset" : "swap"
                             width: height
                             height: units.gu(5) //< parent.height*3/5 ? parent.height*3/5 : units.gu(5)
                             color: "white"
@@ -52,7 +59,7 @@ MainView {
 
                         Text {
                             // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-                            text: i18n.tr("Start a<br/>new game")
+                            text: r ? i18n.tr("Start a<br/>new game") : i18n.tr ("Change mode<br/>and reset")
                             horizontalAlignment: Text.AlignHCenter
                             color: "white"
                         }
@@ -60,8 +67,10 @@ MainView {
 
                     // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
                     //text: i18n.tr ("Restart game")
-                    color: UbuntuColors.red
+                    color: r ? UbuntuColors.red : UbuntuColors.orange
                     onClicked: {
+                        if (!r)
+                            mode = !mode
                         main_page.restart ()
                         PopupUtils.close (d)
                     }
@@ -79,7 +88,7 @@ MainView {
 
                         Icon {
                             anchors.horizontalCenter: parent.horizontalCenter
-                            name: "media-playback-start"
+                            name: r ? "media-playback-start" : "cancel"
                             width: height
                             height: units.gu(5) //< parent.height*3/5 ? parent.height*3/5 : units.gu(5)
                             color: "white"
@@ -136,7 +145,8 @@ MainView {
             header: PageHeader {
                 id: pageHeader
                 // TRANSLATORS: Title of application
-                title: i18n.tr ("Yatzy")
+                title: mode ? i18n.tr ("Kniffel") : i18n.tr ("Yatzy")
+                trailingActionBar.numberOfSlots: 4
                 trailingActionBar.actions: [
                     Action {
                         iconName: "info"
@@ -145,7 +155,7 @@ MainView {
                     },
                     Action {
                         text: i18n.tr("High scores")
-                        iconSource: "high-scores.svg"
+                        iconSource: "../assets/high-scores.svg"
                         onTriggered: {
                             main_page.update_scores ()
                             page_stack.push (scores_page)
@@ -155,10 +165,26 @@ MainView {
                         text: i18n.tr("Reload")
                         iconName: "reload"
                         onTriggered: {
-                            if (main_page.is_started () && !main_page.is_complete ())
+                            if (main_page.is_started () && !main_page.is_complete ()) {
+                                r = true
                                 PopupUtils.open (confirm_new_game_dialog)
+                            }
                             else
                                 main_page.restart ()
+                        }
+                    },
+                    Action {
+                        text: i18n.tr("Mode")
+                        iconName: "settings"
+                        onTriggered: {
+                            if (main_page.is_started () && !main_page.is_complete ()) {
+                                r = false
+                                PopupUtils.open (confirm_new_game_dialog)
+                            }
+                            else {
+                                mode = !mode
+                                main_page.restart ()
+                            }
                         }
                     }
                 ]
@@ -169,8 +195,8 @@ MainView {
             property var dice: [ die0, die1, die2, die3, die4 ]
             property var rolling: die0.rolling || die1.rolling || die2.rolling || die3.rolling || die4.rolling
             property int reroll_count: 0
-            property var score_labels: [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, one_pair_score_label, two_pair_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ]
-            property int total_score: ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + one_pair_score_label.effective_score + two_pair_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score
+            property var score_labels: mode ? [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ] : [ ones_score_label, twos_score_label, threes_score_label, fours_score_label, fives_score_label, sixes_score_label, one_pair_score_label, two_pair_score_label, three_of_a_kind_score_label, four_of_a_kind_score_label, small_straight_score_label, large_straight_score_label, house_score_label, yatzy_score_label, chance_score_label ]
+            property int total_score: mode ? ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score : ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score + one_pair_score_label.effective_score + two_pair_score_label.effective_score + three_of_a_kind_score_label.effective_score + four_of_a_kind_score_label.effective_score + small_straight_score_label.effective_score + large_straight_score_label.effective_score + house_score_label.effective_score + yatzy_score_label.effective_score + chance_score_label.effective_score + bonus_score_label.effective_score
             property bool game_is_over: false
 
             function roll () {
@@ -286,7 +312,10 @@ MainView {
             }
 
             function get_database () {
-                return LocalStorage.openDatabaseSync ("scores", "1", "Yatzy Scores", 0)
+                if (mode)
+                    return LocalStorage.openDatabaseSync ("scoresk", "1", "Kniffel Scores", 1)
+                else
+                    return LocalStorage.openDatabaseSync ("scores", "1", "Yatzy Scores", 0)
             }
 
             function is_started () {
@@ -376,7 +405,10 @@ MainView {
                 var counts = get_counts ()
                 for (var i = 1; i <= 6; i++)
                     if (counts[i] >= 3)
-                        return i * 3
+                        if (mode)
+                            return sum_total ()
+                        else
+                            return i * 3
                 return 0
             }
 
@@ -384,22 +416,29 @@ MainView {
                 var counts = get_counts ()
                 for (var i = 1; i <= 6; i++)
                     if (counts[i] >= 4)
-                        return i * 4
+                        if (mode)
+                            return sum_total ()
+                        else
+                            return i * 4
                 return 0
             }
 
             function small_straight_score () {
                 var counts = get_counts ()
-                if (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1)
+                if (!mode && (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1))
                     return sum_total ()
+                else if (mode && ((counts[1] >= 1 && counts[2] >= 1 && counts[3] >= 1 && counts[4] >= 1) || (counts[2] >= 1 && counts[3] >= 1 && counts[4] >= 1 && counts[5] >= 1) || (counts[3] >= 1 && counts[4] >= 1 && counts[5] >= 1 && counts[6] >= 1)))
+                    return 30
                 else
                     return 0
             }
 
             function large_straight_score () {
                 var counts = get_counts ()
-                if (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1)
+                if (!mode && (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1))
                     return sum_total ()
+                else if (mode && (counts[1] === 1 && counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1) || (counts[2] === 1 && counts[3] === 1 && counts[4] === 1 && counts[5] === 1 && counts[6] === 1))
+                    return 40
                 else
                     return 0
             }
@@ -416,7 +455,10 @@ MainView {
                 }
 
                 if (have_3 && have_2)
-                    return sum_total ()
+                    if (mode)
+                        return 25
+                    else
+                        return sum_total ()
                 else
                     return 0
             }
@@ -592,7 +634,15 @@ MainView {
                         ScoreLabel {
                             id: bonus_score_label
                             enabled: !main_page.rolling
-                            actual_score: (ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score) >= 63 ? 50 : 0
+                            actual_score: {
+                                if ((ones_score_label.effective_score + twos_score_label.effective_score + threes_score_label.effective_score + fours_score_label.effective_score + fives_score_label.effective_score + sixes_score_label.effective_score) >= 63)
+                                    if (mode)
+                                        return 35
+                                    else
+                                        return 50
+                                else
+                                    return 0
+                            }
                         }
                         Label {
                             // TRANSLATORS: Label beside chance score (sum of all dice)
@@ -614,19 +664,23 @@ MainView {
 
                         Label {
                             // TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
+                            visible: !mode
                             text: i18n.tr ("One Pair")
                         }
                         ScoreLabel {
                             id: one_pair_score_label
+                            visible: !mode
                             enabled: !main_page.rolling
                             onSelected: main_page.next_turn ()
                         }
                         Label {
                             // TRANSLATORS: Label beside two pair score (sum of two pair of dice)
+                            visible: !mode
                             text: i18n.tr ("Two Pair")
                         }
                         ScoreLabel {
                             id: two_pair_score_label
+                            visible: !mode
                             enabled: !main_page.rolling
                             onSelected: main_page.next_turn ()
                         }
@@ -714,6 +768,11 @@ MainView {
                         onTriggered: page_stack.push(Qt.resolvedUrl("About.qml"))
                     }
                 ]
+                extension: Sections {
+                    id: mode_sections
+                    model: [i18n.tr("Yatzy"), i18n.tr("Kniffel")]
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
             }
             Flickable {
                 anchors {
@@ -723,40 +782,64 @@ MainView {
                     margins: units.gu (2)
                     top: about_header.bottom
                 }
-                contentHeight: how_to_play_label.height
+                contentHeight: Math.max(how_to_play_label_yatzy.height,how_to_play_label_kniffel.height)
                 flickableDirection: Flickable.VerticalFlick
 
                 Label {
-                    id: how_to_play_label
+                    id: how_to_play_label_yatzy
+                    visible: mode_sections.selectedIndex == 0
                     width: parent.width
                     wrapMode: Text.Wrap
                     textFormat: Text.StyledText
-                    // TRANSLATORS: Game instructions
-                    text: i18n.tr ("<i>Yatzy</i> is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.<br/>\
-<br/>\
-The game is made up of 15 turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.<br/>\
-<br/>\
-Points are scored by summing the dice that make each set. The following sets are possible.<br/>\
-<i>Ones</i>: Dice showing the number 1.<br/>\
-<i>Twos</i>: Dice showing the number 2.<br/>\
-<i>Threes</i>: Dice showing the number 3.<br/>\
-<i>Fours</i>: Dice showing the number 4.<br/>\
-<i>Fives</i>: Dice showing the number 5.<br/>\
-<i>Sixes</i>: Dice showing the number 6.<br/>\
-<i>Bonus</i>: If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points is given.<br/>\
-<i>One Pair</i>: Two dice showing the same number (largest pair used).<br/>\
-<i>Two Pairs</i>: Two pairs of dice.<br/>\
-<i>Three of a Kind</i>: Three dice showing the same number.<br/>\
-<i>Four of a Kind</i>: Four dice showing the same number.<br/>\
-<i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/>\
-<i>Long Straight</i>: 2, 3, 4, 5, 6 in any order.<br/>\
-<i>House</i>: A pair and a three of a kind.<br/>\
-<i>Yatzy</i>: All five dice showing the same number (worth 50 points).<br/>\
-<i>Chance</i>: All dice used for scoring.<br/>\
-<br/>\
-You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.<br/>\
-<br/>\
-Have fun!<br/>")
+                    // TRANSLATORS: Yatzy game instructions
+                    text: "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.") +"<br/><br/>"+
+                    i18n.tr("The game is made up of <b>15</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.") +"<br/><br/>"+
+                    i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
+                    "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
+                    "<i>"+i18n.tr("Twos")+"</i>: "+i18n.tr("Dice showing the number 2.")+"<br/>"+
+                    "<i>"+i18n.tr("Threes")+"</i>: "+i18n.tr("Dice showing the number 3.")+"<br/>"+
+                    "<i>"+i18n.tr("Fours")+"</i>: "+i18n.tr("Dice showing the number 4.")+"<br/>"+
+                    "<i>"+i18n.tr("Fives")+"</i>: "+i18n.tr("Dice showing the number 5.")+"<br/>"+
+                    "<i>"+i18n.tr("Sixes")+"</i>: "+i18n.tr("Dice showing the number 6.")+"<br/>"+
+                    "<i>"+i18n.tr("Bonus")+"</i>: "+i18n.tr("If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 50 points is given.")+"<br/>"+
+                    "<i>"+i18n.tr("One Pair")+"</i>: "+i18n.tr("Two dice showing the same number (largest pair used).")+"<br/>"+
+                    "<i>"+i18n.tr("Two Pairs")+"</i>: "+i18n.tr("Two pairs of dice.")+"<br/>"+
+                    "<i>"+i18n.tr("Three of a Kind")+"</i>: "+i18n.tr("Three dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Four of a Kind")+"</i>: "+i18n.tr("Four dice showing the same number. The eyes of <b>equal</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("1 to 5 in any order -> <b>15</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("2 to 6 in any order -> <b>20</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("House")+"</i>: "+i18n.tr("A pair and a three of a kind <b>sum up</b>.")+"<br/>"+
+                    "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("All five dice showing the same number (worth 50 points).")+"<br/>"+
+                    "<i>"+i18n.tr("Chance")+"</i>: "+i18n.tr("All dice used for scoring.")+"<br/><br/>"+
+                    i18n.tr("You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.")+"<br/><br/>"+
+                    i18n.tr("Have fun!")+"<br/>"
+                }
+                Label {
+                    id: how_to_play_label_kniffel
+                    visible: mode_sections.selectedIndex == 1
+                    width: parent.width
+                    wrapMode: Text.Wrap
+                    textFormat: Text.StyledText
+                    // TRANSLATORS: Kniffel instructions
+                    text: "<i>"+i18n.tr("Kniffel")+"</i>: "+i18n.tr("is a game where you roll five dice and try and make sets that score points. The goal is to get the highest score.")+"<br/><br/>"+
+                    i18n.tr("The game is made up of <b>13</b> turns. A turn starts by rolling all five dice. You can re-roll some or all of the dice up to twice. Select dice to stop them from being re-rolled.")+"<br/><br/>"+
+                    i18n.tr("Points are scored by summing the dice that make each set. The following sets are possible.")+"<br/>"+
+                    "<i>"+i18n.tr("Ones")+"</i>: "+i18n.tr("Dice showing the number 1.")+"<br/>"+
+                    "<i>"+i18n.tr("Twos")+"</i>: "+i18n.tr("Dice showing the number 2.")+"<br/>"+
+                    "<i>"+i18n.tr("Threes")+"</i>: "+i18n.tr("Dice showing the number 3.")+"<br/>"+
+                    "<i>"+i18n.tr("Fours")+"</i>: "+i18n.tr("Dice showing the number 4.")+"<br/>"+
+                    "<i>"+i18n.tr("Fives")+"</i>: "+i18n.tr("Dice showing the number 5.")+"<br/>"+
+                    "<i>"+i18n.tr("Sixes")+"</i>: "+i18n.tr("Dice showing the number 6.")+"<br/>"+
+                    "<i>"+i18n.tr("Bonus")+"</i>: "+i18n.tr("If the above sets score at least 63 points (an average of three dice in each set) then a bonus of 35 points is given.")+"<br/>"+
+                    "<i>"+i18n.tr("Three of a Kind")+"</i>: "+i18n.tr("Three dice showing the same number. The eyes of <b>all</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Four of a Kind")+"</i>: "+i18n.tr("Four dice showing the same number. The eyes of <b>all</b> dice are sum up.")+"<br/>"+
+                    "<i>"+i18n.tr("Small Straight")+"</i>: "+i18n.tr("Row of four in any order -> <b>30</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Long Straight")+"</i>: "+i18n.tr("Row of five in any order -> <b>40</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("House")+"</i>: "+i18n.tr("A pair and a three of a kind -> <b>25</b> points.")+"<br/>"+
+                    "<i>"+i18n.tr("Yatzy")+"</i>: "+i18n.tr("All five dice showing the same number (worth 50 points).")+"<br/>"+
+                    "<i>"+i18n.tr("Chance")+"</i>: "+i18n.tr("All dice used for scoring.")+"<br/><br/>"+
+                    i18n.tr("You must choose a set for each turn. If the dice do not match the chosen set rules then zero is scored for that set.")+"<br/><br/>"+
+                    i18n.tr("Have fun!")+"<br/>"
                 }
             }
         }
@@ -774,6 +857,15 @@ Have fun!<br/>")
                         onTriggered: PopupUtils.open (confirm_clear_scores_dialog)
                     }
                 ]
+                extension: Sections {
+                    model: [i18n.tr("Yatzy"), i18n.tr("Kniffel")]
+                    selectedIndex: mode ? 1 : 0
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    onSelectedIndexChanged: {
+                        mode = selectedIndex==1
+                        main_page.update_scores ()
+                    }
+                }
             }
 
             GridLayout {
