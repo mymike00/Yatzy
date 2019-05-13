@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the yatzy.mike package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: yatzy.mike\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-12 22:18+0200\n"
+"PO-Revision-Date: 2019-05-12 23:03+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Language: ca\n"
+
+#. TRANSLATORS: Title of the About page
+#: ../qml/About.qml:8
+msgid "About"
+msgstr "Quant a"
+
+#: ../qml/About.qml:12
+msgid "Back"
+msgstr "Enrere"
+
+#. TRANSLATORS: app name
+#. TRANSLATORS: Label beside Yatzy score (all dice same value)
+#. TRANSLATORS: Yatzy game instructions
+#: ../qml/About.qml:40 ../qml/Main.qml:148 ../qml/Main.qml:734
+#: ../qml/Main.qml:773 ../qml/Main.qml:795 ../qml/Main.qml:812
+#: ../qml/Main.qml:839 ../qml/Main.qml:861 yatzy.desktop.in.h:1
+msgid "Yatzy"
+msgstr "Yatzy"
+
+#: ../qml/About.qml:46
+msgid "Version %1"
+msgstr "Versió %1"
+
+#: ../qml/About.qml:70
+msgid "Released under the terms of the GNU GPL v3"
+msgstr "Publicada sota els termes de la GNU GPL v3"
+
+#: ../qml/About.qml:81
+msgid "Source code available on"
+msgstr "Codi font disponible a"
+
+#. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
+#: ../qml/Main.qml:31
+msgid "Game in progress"
+msgstr "Joc en curs"
+
+#. TRANSLATORS: Title for dialog shown when switching to another game mode while a game is in progress
+#: ../qml/Main.qml:33
+msgid "Change game mode"
+msgstr "Canvia el mode de joc"
+
+#. TRANSLATORS: Content for dialog shown when starting a new game while one in progress
+#: ../qml/Main.qml:36
+msgid "Are you sure you want to restart this game?"
+msgstr "Segur que voleu reiniciar aquest joc?"
+
+#. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
+#: ../qml/Main.qml:62
+msgid "Start a<br/>new game"
+msgstr "Inicia un<br/>nou joc"
+
+#: ../qml/Main.qml:62
+msgid "Change mode<br/>and reset"
+msgstr "Canvia de mode<br/>i reinicia"
+
+#. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
+#: ../qml/Main.qml:99
+msgid "Continue<br/>current game"
+msgstr "Continua<br/>el joc actual"
+
+#. TRANSLATORS: Title for dialog confirming if scores should be cleared
+#. TRANSLATORS: Button in clear scores dialog that clears scores
+#: ../qml/Main.qml:118 ../qml/Main.qml:123
+msgid "Clear scores"
+msgstr "Neteja les puntuacions"
+
+#. TRANSLATORS: Content for dialog confirming if scores should be cleared
+#: ../qml/Main.qml:120
+msgid "Existing scores will be deleted. This cannot be undone."
+msgstr "Les puntuacions existents s'eliminaran. Això no es pot desfer."
+
+#. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
+#: ../qml/Main.qml:132
+msgid "Keep existing scores"
+msgstr "Manté les puntuacions existents"
+
+#. TRANSLATORS: Title of application
+#. TRANSLATORS: Kniffel instructions
+#: ../qml/Main.qml:148 ../qml/Main.qml:773 ../qml/Main.qml:824
+#: ../qml/Main.qml:861
+msgid "Kniffel"
+msgstr "Kniffel"
+
+#: ../qml/Main.qml:153
+msgid "How to play"
+msgstr "Com es juga"
+
+#: ../qml/Main.qml:157
+msgid "High scores"
+msgstr "Rècords"
+
+#: ../qml/Main.qml:165
+msgid "Reload"
+msgstr "Recarrega"
+
+#: ../qml/Main.qml:177
+msgid "Mode"
+msgstr "Mode"
+
+#. TRANSLATORS: Label shown below high score for a score just achieved
+#: ../qml/Main.qml:273
+msgid "Now"
+msgstr "Ara"
+
+#. TRANSLATORS: Label shown below high score for a score achieved seconds ago
+#: ../qml/Main.qml:278
+msgid "%n second ago"
+msgid_plural "%n seconds ago"
+msgstr[0] "fa %n segons"
+msgstr[1] "fa %n segons"
+
+#. TRANSLATORS: Label shown below high score for a score achieved minutes ago
+#: ../qml/Main.qml:284
+msgid "%n minute ago"
+msgid_plural "%n minutes ago"
+msgstr[0] "fa %n minut"
+msgstr[1] "fa %n minuts"
+
+#. TRANSLATORS: Label shown below high score for a score achieved hours ago
+#: ../qml/Main.qml:290
+msgid "%n hour ago"
+msgid_plural "%n hours ago"
+msgstr[0] "fa %n hora"
+msgstr[1] "fa %n hores"
+
+#. TRANSLATORS: Label shown below high score for a score achieved days ago
+#: ../qml/Main.qml:296
+msgid "%n day ago"
+msgid_plural "%n days ago"
+msgstr[0] "fa %n dia"
+msgstr[1] "fa %n dies"
+
+#. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
+#: ../qml/Main.qml:524
+msgid "New Game"
+msgstr "Joc nou"
+
+#. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
+#: ../qml/Main.qml:526
+msgid "Roll (%n)"
+msgstr "Tirada (%n)"
+
+#. TRANSLATORS: Label beside ones score (sum of dice showing 1)
+#: ../qml/Main.qml:578 ../qml/Main.qml:798 ../qml/Main.qml:827
+msgid "Ones"
+msgstr "Uns"
+
+#. TRANSLATORS: Label beside twos score (sum of dice showing 2)
+#: ../qml/Main.qml:587 ../qml/Main.qml:799 ../qml/Main.qml:828
+msgid "Twos"
+msgstr "Dos"
+
+#. TRANSLATORS: Label beside threes score (sum of dice showing 3)
+#: ../qml/Main.qml:596 ../qml/Main.qml:800 ../qml/Main.qml:829
+msgid "Threes"
+msgstr "Tres"
+
+#. TRANSLATORS: Label beside fours score (sum of dice showing 4)
+#: ../qml/Main.qml:605 ../qml/Main.qml:801 ../qml/Main.qml:830
+msgid "Fours"
+msgstr "Quatres"
+
+#. TRANSLATORS: Label beside fives score (sum of dice showing 5)
+#: ../qml/Main.qml:614 ../qml/Main.qml:802 ../qml/Main.qml:831
+msgid "Fives"
+msgstr "Cincs"
+
+#. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
+#: ../qml/Main.qml:623 ../qml/Main.qml:803 ../qml/Main.qml:832
+msgid "Sixes"
+msgstr "Sisos"
+
+#. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
+#: ../qml/Main.qml:632 ../qml/Main.qml:804 ../qml/Main.qml:833
+msgid "Bonus"
+msgstr "Bonificació"
+
+#. TRANSLATORS: Label beside chance score (sum of all dice)
+#: ../qml/Main.qml:649 ../qml/Main.qml:813 ../qml/Main.qml:840
+msgid "Chance"
+msgstr "Oportunitat"
+
+#: ../qml/Main.qml:668 ../qml/Main.qml:805
+msgid "One Pair"
+msgstr "Una parella"
+
+#: ../qml/Main.qml:679
+msgid "Two Pair"
+msgstr "Dues parelles"
+
+#. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
+#: ../qml/Main.qml:689 ../qml/Main.qml:807 ../qml/Main.qml:834
+msgid "Three of a Kind"
+msgstr "Trio"
+
+#. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
+#: ../qml/Main.qml:698 ../qml/Main.qml:808 ../qml/Main.qml:835
+msgid "Four of a Kind"
+msgstr "Quartet"
+
+#. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
+#: ../qml/Main.qml:707 ../qml/Main.qml:809 ../qml/Main.qml:836
+msgid "Small Straight"
+msgstr "Escala menor"
+
+#. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
+#: ../qml/Main.qml:716
+msgid "Large Straight"
+msgstr "Escala major"
+
+#. TRANSLATORS: Label beside house score (three pair + two pair)
+#: ../qml/Main.qml:725 ../qml/Main.qml:811 ../qml/Main.qml:838
+msgid "House"
+msgstr "Full"
+
+#. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
+#: ../qml/Main.qml:752
+msgid "Total: <b>%n</b>"
+msgstr "Total: <b>%n</b>"
+
+#. TRANSLATORS: Title of page with game instructions
+#: ../qml/Main.qml:762
+msgid "How to Play"
+msgstr "Regles de joc"
+
+#: ../qml/Main.qml:767
+msgid "Info"
+msgstr "Informació"
+
+#: ../qml/Main.qml:795 ../qml/Main.qml:824
+msgid ""
+"is a game where you roll five dice and try and make sets that score points. "
+"The goal is to get the highest score."
+msgstr ""
+"és u joc on feu una tirada de cinc daus provant de fer conjunts per "
+"aconseguir punts. L'objectiu és aconseguir la major puntuació."
+
+#: ../qml/Main.qml:796
+msgid ""
+"The game is made up of <b>15</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"Cada jugada està format per <b>15</b> torns. Cada torn comença tirant els "
+"cinc daus. Podeu tornar a llançar-ne alguns o tots els daus fins a dues "
+"vegades. Seleccioneu els daus que no volgueu tornar a llançar."
+
+#: ../qml/Main.qml:797 ../qml/Main.qml:826
+msgid ""
+"Points are scored by summing the dice that make each set. The following sets "
+"are possible."
+msgstr ""
+"Es guanyen punts sumant els daus que conformen conjunts. Els conjunts "
+"possibles són:"
+
+#: ../qml/Main.qml:798 ../qml/Main.qml:827
+msgid "Dice showing the number 1."
+msgstr "Daus que mostrin el número 1."
+
+#: ../qml/Main.qml:799 ../qml/Main.qml:828
+msgid "Dice showing the number 2."
+msgstr "Daus que mostrin el número 2."
+
+#: ../qml/Main.qml:800 ../qml/Main.qml:829
+msgid "Dice showing the number 3."
+msgstr "Daus que mostrin el número 3."
+
+#: ../qml/Main.qml:801 ../qml/Main.qml:830
+msgid "Dice showing the number 4."
+msgstr "Daus que mostrin el número 4."
+
+#: ../qml/Main.qml:802 ../qml/Main.qml:831
+msgid "Dice showing the number 5."
+msgstr "Daus que mostrin el número 5."
+
+#: ../qml/Main.qml:803 ../qml/Main.qml:832
+msgid "Dice showing the number 6."
+msgstr "Daus que mostrin el número 6."
+
+#: ../qml/Main.qml:804
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 50 points is given."
+msgstr ""
+"Si els conjunts anteriors sumen un mínim de 63 punts (una mitjana de tres "
+"daus a cada conjunt), s'obtendrà una bonificació de 50 punts."
+
+#: ../qml/Main.qml:805
+msgid "Two dice showing the same number (largest pair used)."
+msgstr "Dos daus que mostrin el mateix número (s'usa el parell més alt)"
+
+#: ../qml/Main.qml:806
+msgid "Two Pairs"
+msgstr "Dos parells"
+
+#: ../qml/Main.qml:806
+msgid "Two pairs of dice."
+msgstr "Dos parells de daus."
+
+#: ../qml/Main.qml:807
+msgid ""
+"Three dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Tres daus que mostrin el mateix número. Es sumen els daus <b>iguals.</b>"
+
+#: ../qml/Main.qml:808
+msgid ""
+"Four dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Quatre daus que mostrin el mateix número. Es sumen els daus <b>iguals.</b>"
+
+#: ../qml/Main.qml:809
+msgid "1 to 5 in any order -> <b>15</b> points."
+msgstr "De l'1 al 5 en qualsevol ordre -> <b>15</b> punts."
+
+#: ../qml/Main.qml:810 ../qml/Main.qml:837
+msgid "Long Straight"
+msgstr "Escala major"
+
+#: ../qml/Main.qml:810
+msgid "2 to 6 in any order -> <b>20</b> points."
+msgstr "del 2 al 6 en qualsevol ordre -> <b>20</b> punts."
+
+#: ../qml/Main.qml:811
+msgid "A pair and a three of a kind <b>sum up</b>."
+msgstr "Una parella i un trio de qualsevol tipus <b>sumats</b>."
+
+#: ../qml/Main.qml:812 ../qml/Main.qml:839
+msgid "All five dice showing the same number (worth 50 points)."
+msgstr "Tots cinc daus mostrant el mateix número (val 50 punts)."
+
+#: ../qml/Main.qml:813 ../qml/Main.qml:840
+msgid "All dice used for scoring."
+msgstr "Tots els daus que puntuen."
+
+#: ../qml/Main.qml:814 ../qml/Main.qml:841
+msgid ""
+"You must choose a set for each turn. If the dice do not match the chosen set "
+"rules then zero is scored for that set."
+msgstr ""
+"Heu de triar un conjunt per a cada torn. Si els daus no coincideixen amb les "
+"regles del conjunt escollides, aquest conjunt no puntuarà res."
+
+#: ../qml/Main.qml:815 ../qml/Main.qml:842
+msgid "Have fun!"
+msgstr "Divertiu-vos!"
+
+#: ../qml/Main.qml:825
+msgid ""
+"The game is made up of <b>13</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"El joc està format per <b>13</b> torns. Cada torn comença tirant els cinc "
+"daus. Podeu tornar a llançar-ne alguns o tots els daus fins a dues vegades. "
+"Seleccioneu els que no volgueu tornar a llançar."
+
+#: ../qml/Main.qml:833
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 35 points is given."
+msgstr ""
+"Si els conjunts anteriors sumen un mínim de 63 punts (una mitjana de tres "
+"daus a cada conjunt), es donarà una bonificació de 35 punts."
+
+#: ../qml/Main.qml:834
+msgid ""
+"Three dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Tres daus que mostrin el mateix número. Es sumaran <b>tots</b> els daus."
+
+#: ../qml/Main.qml:835
+msgid ""
+"Four dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Quatre daus que mostrin el mateix número. Es sumaran <b>tots</b> els daus."
+
+#: ../qml/Main.qml:836
+msgid "Row of four in any order -> <b>30</b> points."
+msgstr "Escala de cuatre daus en qualsevol ordre -> <b>30</b> punts."
+
+#: ../qml/Main.qml:837
+msgid "Row of five in any order -> <b>40</b> points."
+msgstr "Escala de cinc daus en qualsevol ordre -> <b>40</b> punts."
+
+#: ../qml/Main.qml:838
+msgid "A pair and a three of a kind -> <b>25</b> points."
+msgstr "Una parella i un trio de qualsevol tipus ->  <b>25</b> punts."
+
+#. TRANSLATORS: Title of page showing high scores
+#: ../qml/Main.qml:853
+msgid "High Scores"
+msgstr "Rècords"
