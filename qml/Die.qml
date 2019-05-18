@@ -1,11 +1,12 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Themes 1.3
 
 Rectangle {
     id: die
     radius: width * 0.1
-    border.color: "grey"
-    border.width: held ? 4 : 1
+    border.color: theme.palette.normal.focus
+    border.width: held ? 5 : 1
     property bool animation_enabled: false
     property int dot_size: width / 7
     Rectangle {
