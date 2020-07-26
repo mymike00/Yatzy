@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yatzy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-22 16:36+0000\n"
-"PO-Revision-Date: 2016-06-05 10:40+0000\n"
+"POT-Creation-Date: 2019-05-11 20:37+0000\n"
+"PO-Revision-Date: 2020-07-26 17:23+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "Language: nl\n"
@@ -17,297 +17,459 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2016-09-27 07:09+0000\n"
-"X-Generator: Launchpad (build 18204)\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #. TRANSLATORS: Title of the About page
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:8
+#: ../qml/About.qml:8
 msgid "About"
-msgstr ""
+msgstr "Over"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:12
+#: ../qml/About.qml:12
 msgid "Back"
-msgstr ""
+msgstr "Vorige"
 
 #. TRANSLATORS: app name
-#. TRANSLATORS: Title of application
 #. TRANSLATORS: Label beside Yatzy score (all dice same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:40
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:139
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:680
+#. TRANSLATORS: Yatzy game instructions
+#: ../qml/About.qml:40 ../qml/Main.qml:148 ../qml/Main.qml:734
+#: ../qml/Main.qml:773 ../qml/Main.qml:795 ../qml/Main.qml:812
+#: ../qml/Main.qml:839 ../qml/Main.qml:861 yatzy.desktop.in.h:1
 msgid "Yatzy"
 msgstr "Yatzy"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:46
-msgid "Version "
-msgstr ""
+#: ../qml/About.qml:46
+msgid "Version %1"
+msgstr "Versie %1"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:70
+#: ../qml/About.qml:70
 msgid "Released under the terms of the GNU GPL v3"
-msgstr ""
+msgstr "Uitgebracht onder de voorwaarden van de GNU GPL v3"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/About.qml:81
-msgid ""
-"Source code available on <a style=\"text-decoration: none;\" href=\"https://"
-"github.com/mymike00/Yatzy\">GitHub.com</a>"
-msgstr ""
+#: ../qml/About.qml:81
+msgid "Source code available on"
+msgstr "De broncode is beschikbaar op"
 
 #. TRANSLATORS: Title for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:26
+#: ../qml/Main.qml:31
 msgid "Game in progress"
 msgstr "Bezig met een spel"
 
+#. TRANSLATORS: Title for dialog shown when switching to another game mode while a game is in progress
+#: ../qml/Main.qml:33
+msgid "Change game mode"
+msgstr "Spelmodus kiezen"
+
 #. TRANSLATORS: Content for dialog shown when starting a new game while one in progress
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:28
+#: ../qml/Main.qml:36
 msgid "Are you sure you want to restart this game?"
-msgstr "Weet u zeker dat u dit spel wilt herstarten?"
+msgstr "Weet je zeker dat je dit spel wilt herstarten?"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:55
+#: ../qml/Main.qml:62
 msgid "Start a<br/>new game"
-msgstr ""
+msgstr "Nieuw spel<br/>starten"
+
+#: ../qml/Main.qml:62
+msgid "Change mode<br/>and reset"
+msgstr "Andere spelmodus kiezen<br/>en herstarten"
 
 #. TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:90
-#, fuzzy
+#: ../qml/Main.qml:99
 msgid "Continue<br/>current game"
-msgstr "Doorgaan met huidig spel"
+msgstr "Doorgaan met<br/>huidig spel"
 
 #. TRANSLATORS: Title for dialog confirming if scores should be cleared
 #. TRANSLATORS: Button in clear scores dialog that clears scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:109
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:114
+#: ../qml/Main.qml:118 ../qml/Main.qml:123
 msgid "Clear scores"
 msgstr "Scores wissen"
 
 #. TRANSLATORS: Content for dialog confirming if scores should be cleared
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:111
+#: ../qml/Main.qml:120
 msgid "Existing scores will be deleted. This cannot be undone."
 msgstr ""
-"De bestaande scores zullen worden verwijderd; dit kan niet ongedaan worden "
-"gemaakt."
+"De bestaande scores worden verwijderd. Dit kan niet ongedaan worden gemaakt."
 
 #. TRANSLATORS: Button in clear scores dialog that cancels clear scores request
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:123
+#: ../qml/Main.qml:132
 msgid "Keep existing scores"
 msgstr "Bestaande scores behouden"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:143
-#, fuzzy
+#. TRANSLATORS: Title of application
+#. TRANSLATORS: Kniffel instructions
+#: ../qml/Main.qml:148 ../qml/Main.qml:773 ../qml/Main.qml:824
+#: ../qml/Main.qml:861
+msgid "Kniffel"
+msgstr "Kniffel"
+
+#: ../qml/Main.qml:153
 msgid "How to play"
 msgstr "Speluitleg"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:147
-#, fuzzy
+#: ../qml/Main.qml:157
 msgid "High scores"
 msgstr "Topscores"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:155
+#: ../qml/Main.qml:165
 msgid "Reload"
-msgstr ""
+msgstr "Herladen"
+
+#: ../qml/Main.qml:177
+msgid "Mode"
+msgstr "Modus"
 
 #. TRANSLATORS: Label shown below high score for a score just achieved
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:247
+#: ../qml/Main.qml:273
 msgid "Now"
-msgstr "Nu"
+msgstr "Zojuist"
 
 #. TRANSLATORS: Label shown below high score for a score achieved seconds ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:252
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:278
 msgid "%n second ago"
 msgid_plural "%n seconds ago"
 msgstr[0] "%n seconde geleden"
 msgstr[1] "%n seconden geleden"
 
 #. TRANSLATORS: Label shown below high score for a score achieved minutes ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:258
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:284
 msgid "%n minute ago"
 msgid_plural "%n minutes ago"
 msgstr[0] "%n minuut geleden"
 msgstr[1] "%n minuten geleden"
 
 #. TRANSLATORS: Label shown below high score for a score achieved hours ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:264
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:290
 msgid "%n hour ago"
 msgid_plural "%n hours ago"
 msgstr[0] "%n uur geleden"
 msgstr[1] "%n uur geleden"
 
 #. TRANSLATORS: Label shown below high score for a score achieved days ago
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:270
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:296
 msgid "%n day ago"
 msgid_plural "%n days ago"
 msgstr[0] "%n dag geleden"
 msgstr[1] "%n dagen geleden"
 
 #. TRANSLATORS: Button text for roll button when game is complete (starts a new game)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:482
+#: ../qml/Main.qml:524
 msgid "New Game"
 msgstr "Nieuw spel"
 
 #. TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:484
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:526
 msgid "Roll (%n)"
-msgstr "Gooi (%n)"
+msgstr "Gooien (%n)"
 
 #. TRANSLATORS: Label beside ones score (sum of dice showing 1)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:536
+#: ../qml/Main.qml:578 ../qml/Main.qml:798 ../qml/Main.qml:827
 msgid "Ones"
 msgstr "Enen"
 
 #. TRANSLATORS: Label beside twos score (sum of dice showing 2)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:545
+#: ../qml/Main.qml:587 ../qml/Main.qml:799 ../qml/Main.qml:828
 msgid "Twos"
 msgstr "Tweeën"
 
 #. TRANSLATORS: Label beside threes score (sum of dice showing 3)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:554
+#: ../qml/Main.qml:596 ../qml/Main.qml:800 ../qml/Main.qml:829
 msgid "Threes"
 msgstr "Drieën"
 
 #. TRANSLATORS: Label beside fours score (sum of dice showing 4)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:563
+#: ../qml/Main.qml:605 ../qml/Main.qml:801 ../qml/Main.qml:830
 msgid "Fours"
 msgstr "Vieren"
 
 #. TRANSLATORS: Label beside fives score (sum of dice showing 5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:572
+#: ../qml/Main.qml:614 ../qml/Main.qml:802 ../qml/Main.qml:831
 msgid "Fives"
-msgstr "Vijfen"
+msgstr "Vijven"
 
 #. TRANSLATORS: Label beside sixes score (sum of dice showing 6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:581
+#: ../qml/Main.qml:623 ../qml/Main.qml:803 ../qml/Main.qml:832
 msgid "Sixes"
 msgstr "Zessen"
 
 #. TRANSLATORS: Label beside bonus score (50 points if total of ones, twos, threes, fours, fives, sixes is at least 63)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:590
+#: ../qml/Main.qml:632 ../qml/Main.qml:804 ../qml/Main.qml:833
 msgid "Bonus"
 msgstr "Bonus"
 
 #. TRANSLATORS: Label beside chance score (sum of all dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:599
+#: ../qml/Main.qml:649 ../qml/Main.qml:813 ../qml/Main.qml:840
 msgid "Chance"
 msgstr "Kans"
 
-#. TRANSLATORS: Label beside one pair score (sum of highest pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:617
+#: ../qml/Main.qml:668 ../qml/Main.qml:805
 msgid "One Pair"
-msgstr "Één paar"
+msgstr "Eén paar"
 
-#. TRANSLATORS: Label beside two pair score (sum of two pair of dice)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:626
+#: ../qml/Main.qml:679
 msgid "Two Pair"
 msgstr "Twee paar"
 
 #. TRANSLATORS: Label beside three of a kind score (sum of three dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:635
+#: ../qml/Main.qml:689 ../qml/Main.qml:807 ../qml/Main.qml:834
 msgid "Three of a Kind"
 msgstr "Drie gelijke"
 
 #. TRANSLATORS: Label beside four of a kind score (sum of four dice with same value)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:644
+#: ../qml/Main.qml:698 ../qml/Main.qml:808 ../qml/Main.qml:835
 msgid "Four of a Kind"
 msgstr "Vier gelijke"
 
 #. TRANSLATORS: Label beside small straight score (1+2+3+4+5)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:653
+#: ../qml/Main.qml:707 ../qml/Main.qml:809 ../qml/Main.qml:836
 msgid "Small Straight"
 msgstr "Kleine straat"
 
 #. TRANSLATORS: Label beside large straight score (2+3+4+5+6)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:662
+#: ../qml/Main.qml:716
 msgid "Large Straight"
 msgstr "Grote straat"
 
 #. TRANSLATORS: Label beside house score (three pair + two pair)
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:671
+#: ../qml/Main.qml:725 ../qml/Main.qml:811 ../qml/Main.qml:838
 msgid "House"
 msgstr "Full House"
 
 #. TRANSLATORS: Label text for showing total score. %n is replaced with score value.
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:698
-#, c-format, qt-plural-format
+#: ../qml/Main.qml:752
 msgid "Total: <b>%n</b>"
 msgstr "Totaal: <b>%n</b>"
 
 #. TRANSLATORS: Title of page with game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:708
+#: ../qml/Main.qml:762
 msgid "How to Play"
 msgstr "Speluitleg"
 
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:713
+#: ../qml/Main.qml:767
 msgid "Info"
-msgstr ""
+msgstr "Informatie"
 
-#. TRANSLATORS: Game instructions
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:735
+#: ../qml/Main.qml:795 ../qml/Main.qml:824
 msgid ""
-"<i>Yatzy</i> is a game where you roll five dice and try and make sets that "
-"score points. The goal is to get the highest score.<br/><br/>The game is "
-"made up of 15 turns. A turn starts by rolling all five dice. You can re-roll "
-"some or all of the dice up to twice. Select dice to stop them from being re-"
-"rolled.<br/><br/>Points are scored by summing the dice that make each set. "
-"The following sets are possible.<br/><i>Ones</i>: Dice showing the number 1."
-"<br/><i>Twos</i>: Dice showing the number 2.<br/><i>Threes</i>: Dice showing "
-"the number 3.<br/><i>Fours</i>: Dice showing the number 4.<br/><i>Fives</i>: "
-"Dice showing the number 5.<br/><i>Sixes</i>: Dice showing the number 6.<br/"
-"><i>Bonus</i>: If the above sets score at least 63 points (an average of "
-"three dice in each set) then a bonus of 50 points is given.<br/><i>One Pair</"
-"i>: Two dice showing the same number (largest pair used).<br/><i>Two Pairs</"
-"i>: Two pairs of dice.<br/><i>Three of a Kind</i>: Three dice showing the "
-"same number.<br/><i>Four of a Kind</i>: Four dice showing the same number."
-"<br/><i>Small Straight</i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long "
-"Straight</i>: 2, 3, 4, 5, 6 in any order.<br/><i>House</i>: A pair and a "
-"three of a kind.<br/><i>Yatzy</i>: All five dice showing the same number "
-"(worth 50 points).<br/><i>Chance</i>: All dice used for scoring.<br/><br/"
-">You must choose a set for each turn. If the dice do not match the chosen "
-"set rules then zero is scored for that set.<br/><br/>Have fun!<br/>"
+"is a game where you roll five dice and try and make sets that score points. "
+"The goal is to get the highest score."
 msgstr ""
-"<i>Yatzy</i> is een spel waar u vijf dobbelstenen moet gooien en daar paren "
-"van moet zien te vormen; zo scoort u punten. Het doel van het spel is om de "
-"hoogste score te krijgen.<br/><br/>Het spel bestaat uit 15 ronden. Een ronde "
-"begint met het gooien van alle vijf de dobbelstenen. U kunt sommige of alle "
-"dobbelstenen opnieuw gooien, maximaal twee keer. Selecteer een dobbelsteen "
-"om te voorkomen dat deze opnieuw wordt gegoooid.<br/><br/>U kunt punten "
-"scoren door het totaal aantal van de dobbelsteensets op te tellen. U kunt de "
-"volgende sets maken:<br/><i>Enen</i>: Dobbelstenen met het nummer 1.<br/"
-"><i>Tweeën</i>: Dobbelstenen met het nummer 2.<br/><i>Drieën</i>: "
-"Dobbelstenen met het nummer 3.<br/><i>Vieren</i>Dobbelstenen met het nummer "
-"4.<br/><i>Vijfen</i>: Dobbelstenen met het nummer 5.<br/><i>Zessen</i>: "
-"Dobbelstenen met het nummer 6.<br/><i>Bonus:</i>: Als de bovenstaande sets "
-"bij elkaar op geteld op minimaal 63 punten uitkomen (gemiddeld drie "
-"dobbelstenen per set), dan wordt er een bonus van 50 punten toegekend.<br/"
-"><i>Eén paar</i>: Twee dobbelstenen met hetzelfde nummer (het grootste paar "
-"telt).<br/><i>Twee paar</i>: Twee dobbelsteenparen.<br/><i>Drie gelijke</i>: "
-"Drie dobbelstenen met hetzelfde nummer.<br/><i>Vier gelijke</i>: Vier "
-"dobbelstenen met hetzelfde nummer.<br/><i>Kleine straat</i>: 1, 2, 3, 4, 5 "
-"in willekeurige volgorde.<br/><i>Grote straat</i>: 2, 3, 4, 5, 6 in "
-"willekeurige volgorde.<br/><i>Full House</i>: Eén paar en drie gelijke.<br/"
-"><i>Yatzy</>: Alle vijf de dobbelstenen met hetzelfde nummer (waarde: 50 "
-"punten).<br/><i>Kans</i>: Alle dobbelstenen die voorkomen in de score.<br/"
-"><br/>U moet een set kiezen voor elke ronde. Als de dobbelstenen niet "
-"overeenkomen met de gekozen setregels, dan worden er 0 punten toegekend voor "
-"de desbetreffende set.<br/><br/>Veel plezier!<br/>"
+"is een spel waarbij je vijf dobbelstenen moet gooien en daar paren van moet "
+"zien te vormen om punten te scoren. Het doel van het spel is om de hoogste "
+"score te krijgen."
+
+#: ../qml/Main.qml:796
+msgid ""
+"The game is made up of <b>15</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"Het spel bestaat uit <b>15</b> beurten. Elke beurt gooi je alle vijf "
+"dobbelstenen. Daarna kun je sommige of alle max. 2 keer opnieuw gooien. Druk "
+"op een dobbelsteen om deze vast te zetten."
+
+#: ../qml/Main.qml:797 ../qml/Main.qml:826
+msgid ""
+"Points are scored by summing the dice that make each set. The following sets "
+"are possible."
+msgstr ""
+"Je scoort punten door alle dobbelsteenwaarden bij elkaar op te tellen. De "
+"volgende combinaties zijn mogelijk:"
+
+#: ../qml/Main.qml:798 ../qml/Main.qml:827
+msgid "Dice showing the number 1."
+msgstr "Dobbelsteen met waarde 1."
+
+#: ../qml/Main.qml:799 ../qml/Main.qml:828
+msgid "Dice showing the number 2."
+msgstr "Dobbelsteen met waarde 2."
+
+#: ../qml/Main.qml:800 ../qml/Main.qml:829
+msgid "Dice showing the number 3."
+msgstr "Dobbelsteen met waarde 3."
+
+#: ../qml/Main.qml:801 ../qml/Main.qml:830
+msgid "Dice showing the number 4."
+msgstr "Dobbelsteen met waarde 4."
+
+#: ../qml/Main.qml:802 ../qml/Main.qml:831
+msgid "Dice showing the number 5."
+msgstr "Dobbelsteen met waarde 5."
+
+#: ../qml/Main.qml:803 ../qml/Main.qml:832
+msgid "Dice showing the number 6."
+msgstr "Dobbelsteen met waarde 6."
+
+#: ../qml/Main.qml:804
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 50 points is given."
+msgstr ""
+"Als de dobbelstenen bij elkaar minimaal 63 punten waard zijn (ong. drie per "
+"set), dan krijg je 50 bonuspunten."
+
+#: ../qml/Main.qml:805
+msgid "Two dice showing the same number (largest pair used)."
+msgstr "Twee dobbelstenen met dezelfde waarde (hoogste paar)."
+
+#: ../qml/Main.qml:806
+msgid "Two Pairs"
+msgstr "Twee paar"
+
+#: ../qml/Main.qml:806
+msgid "Two pairs of dice."
+msgstr "Twee paar dobbelstenen."
+
+#: ../qml/Main.qml:807
+msgid ""
+"Three dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Drie dobbelstenen met dezelfde waarde. De punten van <b>gelijke</b> "
+"dobbelstenen worden opgeteld."
+
+#: ../qml/Main.qml:808
+msgid ""
+"Four dice showing the same number. The eyes of <b>equal</b> dice are sum up."
+msgstr ""
+"Vier dobbelstenen met dezelfde waarde. De punten van <b>gelijke</b> "
+"dobbelstenen worden opgeteld."
+
+#: ../qml/Main.qml:809
+msgid "1 to 5 in any order -> <b>15</b> points."
+msgstr "1 tot 5 in willekeurige volgorde -> <b>15</b> punten."
+
+#: ../qml/Main.qml:810 ../qml/Main.qml:837
+msgid "Long Straight"
+msgstr "Lange straat"
+
+#: ../qml/Main.qml:810
+msgid "2 to 6 in any order -> <b>20</b> points."
+msgstr "2 tot 6 in willekeurige volgorde -> <b>20</b> punten."
+
+#: ../qml/Main.qml:811
+msgid "A pair and a three of a kind <b>sum up</b>."
+msgstr "Eén paar en drie dezelfde <b>opgeteld</b>."
+
+#: ../qml/Main.qml:812 ../qml/Main.qml:839
+msgid "All five dice showing the same number (worth 50 points)."
+msgstr "Alle vijf dobbelstenen met dezelfde waarde (50 punten waard)."
+
+#: ../qml/Main.qml:813 ../qml/Main.qml:840
+msgid "All dice used for scoring."
+msgstr "Alle dobbelstenen waarmee je scoort."
+
+#: ../qml/Main.qml:814 ../qml/Main.qml:841
+msgid ""
+"You must choose a set for each turn. If the dice do not match the chosen set "
+"rules then zero is scored for that set."
+msgstr ""
+"Je moet per beurt een set kiezen. Als de dobbelsteen niet overeenkomt met de "
+"gekozen regels, dan scoor je nul punten."
+
+#: ../qml/Main.qml:815 ../qml/Main.qml:842
+msgid "Have fun!"
+msgstr "Veel plezier!"
+
+#: ../qml/Main.qml:825
+msgid ""
+"The game is made up of <b>13</b> turns. A turn starts by rolling all five "
+"dice. You can re-roll some or all of the dice up to twice. Select dice to "
+"stop them from being re-rolled."
+msgstr ""
+"Het spel bestaat uit <b>13</b> beurten. Elke beurt gooi je alle vijf "
+"dobbelstenen. Daarna kun je sommige of alle max. 2 keer opnieuw gooien. Druk "
+"op een dobbelsteen om deze vast te zetten."
+
+#: ../qml/Main.qml:833
+msgid ""
+"If the above sets score at least 63 points (an average of three dice in each "
+"set) then a bonus of 35 points is given."
+msgstr ""
+"Als de dobbelstenen bij elkaar minimaal 63 punten waard zijn (ong. drie per "
+"set), dan krijg je 35 bonuspunten."
+
+#: ../qml/Main.qml:834
+msgid ""
+"Three dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Drie dobbelstenen met dezelfde waarde. De punten van <b>alle</b> "
+"dobbelstenen worden opgeteld."
+
+#: ../qml/Main.qml:835
+msgid ""
+"Four dice showing the same number. The eyes of <b>all</b> dice are sum up."
+msgstr ""
+"Vier dobbelstenen met dezelfde waarde. De punten van <b>alle</b> "
+"dobbelstenen worden opgeteld."
+
+#: ../qml/Main.qml:836
+msgid "Row of four in any order -> <b>30</b> points."
+msgstr "Rij met vieren in willekeurige volgorde -> <b>30</b> punten."
+
+#: ../qml/Main.qml:837
+msgid "Row of five in any order -> <b>40</b> points."
+msgstr "Rij met vijven in willekeurige volgorde -> <b>40</b> punten."
+
+#: ../qml/Main.qml:838
+msgid "A pair and a three of a kind -> <b>25</b> points."
+msgstr "Eén paar en drie dezelfde -> <b>25</b> punten."
 
 #. TRANSLATORS: Title of page showing high scores
-#: /home/mike/Documenti/PC/App/Yatzy/Yatzy/Main.qml:770
+#: ../qml/Main.qml:853
 msgid "High Scores"
 msgstr "Topscores"
 
+#~ msgid ""
+#~ "<i>Yatzy</i> is a game where you roll five dice and try and make sets "
+#~ "that score points. The goal is to get the highest score.<br/><br/>The "
+#~ "game is made up of 15 turns. A turn starts by rolling all five dice. You "
+#~ "can re-roll some or all of the dice up to twice. Select dice to stop them "
+#~ "from being re-rolled.<br/><br/>Points are scored by summing the dice that "
+#~ "make each set. The following sets are possible.<br/><i>Ones</i>: Dice "
+#~ "showing the number 1.<br/><i>Twos</i>: Dice showing the number 2.<br/"
+#~ "><i>Threes</i>: Dice showing the number 3.<br/><i>Fours</i>: Dice showing "
+#~ "the number 4.<br/><i>Fives</i>: Dice showing the number 5.<br/><i>Sixes</"
+#~ "i>: Dice showing the number 6.<br/><i>Bonus</i>: If the above sets score "
+#~ "at least 63 points (an average of three dice in each set) then a bonus of "
+#~ "50 points is given.<br/><i>One Pair</i>: Two dice showing the same number "
+#~ "(largest pair used).<br/><i>Two Pairs</i>: Two pairs of dice.<br/"
+#~ "><i>Three of a Kind</i>: Three dice showing the same number.<br/><i>Four "
+#~ "of a Kind</i>: Four dice showing the same number.<br/><i>Small Straight</"
+#~ "i>: 1, 2, 3, 4, 5 in any order.<br/><i>Long Straight</i>: 2, 3, 4, 5, 6 "
+#~ "in any order.<br/><i>House</i>: A pair and a three of a kind.<br/"
+#~ "><i>Yatzy</i>: All five dice showing the same number (worth 50 points)."
+#~ "<br/><i>Chance</i>: All dice used for scoring.<br/><br/>You must choose a "
+#~ "set for each turn. If the dice do not match the chosen set rules then "
+#~ "zero is scored for that set.<br/><br/>Have fun!<br/>"
+#~ msgstr ""
+#~ "<i>Yatzy</i> is een spel waar u vijf dobbelstenen moet gooien en daar "
+#~ "paren van moet zien te vormen; zo scoort u punten. Het doel van het spel "
+#~ "is om de hoogste score te krijgen.<br/><br/>Het spel bestaat uit 15 "
+#~ "ronden. Een ronde begint met het gooien van alle vijf de dobbelstenen. U "
+#~ "kunt sommige of alle dobbelstenen opnieuw gooien, maximaal twee keer. "
+#~ "Selecteer een dobbelsteen om te voorkomen dat deze opnieuw wordt gegoooid."
+#~ "<br/><br/>U kunt punten scoren door het totaal aantal van de "
+#~ "dobbelsteensets op te tellen. U kunt de volgende sets maken:<br/><i>Enen</"
+#~ "i>: Dobbelstenen met het nummer 1.<br/><i>Tweeën</i>: Dobbelstenen met "
+#~ "het nummer 2.<br/><i>Drieën</i>: Dobbelstenen met het nummer 3.<br/"
+#~ "><i>Vieren</i>Dobbelstenen met het nummer 4.<br/><i>Vijfen</i>: "
+#~ "Dobbelstenen met het nummer 5.<br/><i>Zessen</i>: Dobbelstenen met het "
+#~ "nummer 6.<br/><i>Bonus:</i>: Als de bovenstaande sets bij elkaar op "
+#~ "geteld op minimaal 63 punten uitkomen (gemiddeld drie dobbelstenen per "
+#~ "set), dan wordt er een bonus van 50 punten toegekend.<br/><i>Eén paar</"
+#~ "i>: Twee dobbelstenen met hetzelfde nummer (het grootste paar telt).<br/"
+#~ "><i>Twee paar</i>: Twee dobbelsteenparen.<br/><i>Drie gelijke</i>: Drie "
+#~ "dobbelstenen met hetzelfde nummer.<br/><i>Vier gelijke</i>: Vier "
+#~ "dobbelstenen met hetzelfde nummer.<br/><i>Kleine straat</i>: 1, 2, 3, 4, "
+#~ "5 in willekeurige volgorde.<br/><i>Grote straat</i>: 2, 3, 4, 5, 6 in "
+#~ "willekeurige volgorde.<br/><i>Full House</i>: Eén paar en drie gelijke."
+#~ "<br/><i>Yatzy</>: Alle vijf de dobbelstenen met hetzelfde nummer (waarde: "
+#~ "50 punten).<br/><i>Kans</i>: Alle dobbelstenen die voorkomen in de score."
+#~ "<br/><br/>U moet een set kiezen voor elke ronde. Als de dobbelstenen niet "
+#~ "overeenkomen met de gekozen setregels, dan worden er 0 punten toegekend "
+#~ "voor de desbetreffende set.<br/><br/>Veel plezier!<br/>"
+
 #~ msgid "Restart game"
 #~ msgstr "Spel herstarten"
-
-#~ msgid ""
-#~ "A game where you roll five dice and try and make sets that score points. "
-#~ "The goal is to get the highest score."
-#~ msgstr ""
-#~ "Een spel waar u vijf dobbelstenen moet gooien en daar paren van moet zien "
-#~ "te vormen; zo scoort u punten. Het doel van het spel is om de hoogste "
-#~ "score te krijgen."
 
 #~ msgid "die,dice,yahtzee,roll"
 #~ msgstr "dobbel,dobbelsteen,yahtzee,gooien"
