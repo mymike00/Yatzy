@@ -9,7 +9,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     property int potential_score: 0
@@ -32,8 +32,8 @@ Item {
         }
         Behavior on opacity {
             NumberAnimation {
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }
@@ -48,8 +48,8 @@ Item {
         font.bold: true
         Behavior on opacity {
             NumberAnimation {
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }

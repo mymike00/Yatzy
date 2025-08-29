@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 Rectangle {
     id: die
@@ -93,23 +93,23 @@ Rectangle {
     Behavior on x {
         enabled: animation_enabled
         NumberAnimation {
-            easing: UbuntuAnimation.StandardEasing
-            duration: UbuntuAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
         }
     }
     Behavior on y {
         enabled: animation_enabled
         NumberAnimation {
-            easing: UbuntuAnimation.StandardEasing
-            duration: UbuntuAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
         }
     }
     Behavior on opacity {
         enabled: animation_enabled
         NumberAnimation {
             id: opacity_animation
-            easing: UbuntuAnimation.StandardEasing
-            duration: UbuntuAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
         }
     }
     Timer {

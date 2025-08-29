@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Layouts 1.1
 import QtQuick.LocalStorage 2.0
 
@@ -67,7 +67,7 @@ MainView {
 
                     // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
                     //text: i18n.tr ("Restart game")
-                    color: r ? UbuntuColors.red : UbuntuColors.orange
+                    color: r ? LomiriColors.red : LomiriColors.orange
                     onClicked: {
                         if (!r)
                             mode = !mode
@@ -104,7 +104,7 @@ MainView {
 
                     // TRANSLATORS: Button in new game dialog that cancels the current game and starts a new one
                     //text: i18n.tr ("Restart game")
-                    color: UbuntuColors.green
+                    color: LomiriColors.green
                     onClicked: PopupUtils.close (d)
                 }
             }
@@ -121,7 +121,7 @@ MainView {
             Button {
                 // TRANSLATORS: Button in clear scores dialog that clears scores
                 text: i18n.tr ("Clear scores")
-                color: UbuntuColors.red
+                color: LomiriColors.red
                 onClicked: {
                     main_page.clear_scores ()
                     PopupUtils.close (d)
@@ -519,7 +519,7 @@ MainView {
                 anchors.top: dice_row.bottom
                 anchors.topMargin: units.gu (2)
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: main_page.game_is_over ? UbuntuColors.green : UbuntuColors.orange
+                color: main_page.game_is_over ? LomiriColors.green : LomiriColors.orange
                 // TRANSLATORS: Button text for roll button when game is complete (starts a new game)
                 property string new_game_text: i18n.tr ("New Game")
                 // TRANSLATORS: Button text for roll button. %n is replaced with the number of rolls remaining

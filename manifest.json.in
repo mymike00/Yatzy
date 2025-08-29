@@ -1,7 +1,7 @@
 {
     "name": "yatzy.mike",
     "description": "Roll five dice to score combinations. http://en.wikipedia.org/wiki/Yatzy",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "Yatzy",
     "hooks": {
         "Yatzy": {
@@ -9,7 +9,7 @@
             "desktop": "yatzy.desktop"
         }
     },
-    "version": "0.3",
+    "version": "0.4",
     "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
-    "framework": "ubuntu-sdk-16.04"
+    "framework": "@CLICK_FRAMEWORK@"
 }
